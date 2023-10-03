@@ -1,0 +1,172 @@
+/* Styles for the color selector and dropdown */
+.ag-theme-alpine  {
+  --ag-header-height: 40px;
+    --ag-header-foreground-color: rgb(9, 9, 9);
+    --ag-header-background-color: rgb(126, 215, 94);
+    --ag-header-cell-hover-background-color: rgb(145, 224, 131);
+    --ag-header-cell-moving-background-color: rgb(164, 128, 218);
+    --ag-font-size: 14px;
+    --ag-selected-row-background-color: rgb(99, 217, 203);
+    --ag-range-selection-border-color: rgb(14, 13, 13);
+    --ag-range-selection-border-style: dotted;
+    --ag-range-selection-background-color: rgb(82, 236, 144);
+
+    --ag-header-column-separator-display: block;
+    --ag-header-column-separator-height: 100%;
+    --ag-header-column-separator-width: 2px;
+    --ag-header-column-separator-color: rgb(16, 14, 16);
+
+    --ag-header-column-resize-handle-display: block;
+    --ag-header-column-resize-handle-height: 25%;
+    --ag-header-column-resize-handle-width: 1px;
+    --ag-header-column-resize-handle-color: rgb(12, 12, 12);   
+  }
+
+
+  .ag-header {
+
+    background: rgb(207,255,153);
+
+    background: linear-gradient(90deg, rgba(207,255,153,1) 0%, rgba(115,242,187,1) 36%, rgba(37,231,216,1) 61%);
+
+  }
+
+  /* Timing */
+  .typ_0p85v_85c_typ_max_IO{
+    background-color: rgb(191, 141, 237);
+  }
+  .typ_0p85v_85c_typ_max_R2R{
+    background-color: rgba(225, 122, 178, 0.977);
+  }
+
+  /* Route */
+  .Routing{
+    background-color: rgba(218, 216, 102, 0.789);
+  }
+  .Congestion{
+    background-color: rgba(134, 141, 240, 0.889);
+  }
+
+  /* Design */
+
+.Area{
+  background-color: rgba(237, 105, 132, 0.886);
+}
+.Cell_Counts{
+  background-color: rgb(105, 210, 210);
+}
+.Cell_Area{
+  background-color: rgba(150, 141, 205, 0.84);
+}
+.Cell_Flops{
+  background-color: rgba(11, 207, 158, 0.553);
+}
+.num_dcudp_datapathfubs{
+  background-color: rgba(114, 155, 190, 0.778);
+}
+.Ports{
+  background-color: rgba(221, 160, 227, 0.912);
+}
+
+/* Power */
+.Total_Z{
+  background-color: rgb(169, 211, 189);
+}
+.Norm_ZAvg_ZAvgNorm_Z{
+  background-color: rgba(219, 198, 166, 0.792);
+}
+
+.svt{
+  background-color: rgba(158, 167, 187, 0.695);
+}
+.ivt{
+  background-color: rgba(194, 223, 142, 0.921);
+}
+.ivt_ll{
+  background-color: rgba(221, 149, 219, 0.484);
+}
+.Clk{
+  background-color: rgba(131, 230, 202, 0.788);
+}
+.Constant_Switching_Activity{
+  background-color: rgb(152, 212, 212);
+}
+/* Compute */
+.TPT{
+  background-color: rgba(239, 170, 143, 0.858);
+}
+.Mem{
+  background-color: rgb(234, 171, 185);
+}
+
+
+
+
+  
+  .word-wrap {
+    white-space: normal !important;
+  }
+
+
+/* Add these styles to your CSS file */
+.red-button {
+  background-color: rgb(226, 163, 163);
+  color: rgb(9, 9, 9);
+  
+}
+
+.green-button {
+  background-color: rgb(154, 229, 154);
+  color: rgb(9, 9, 9);
+}
+
+.yellow-button {
+  background-color: rgb(229, 229, 150);
+  color: black; /* Adjust text color as needed */
+}
+
+.blue-button {
+  background-color: rgb(189, 189, 234);
+  color: rgb(9, 9, 9);
+}
+
+.orange-button {
+  background-color: rgb(210, 225, 165);
+  color: rgb(9, 9, 9);
+}
+
+.gray-button {
+  background-color: rgb(193, 240, 233);
+  color: rgb(9, 9, 9);
+}
+
+
+
+.category-button {
+  cursor: pointer; /* Change cursor to a hand symbol on hover */
+  margin-right: 5px;
+}
+
+.intra-viols-spv {
+
+  background-color: #c4a2f1f2; /* Set the background color for Intra viols (SPV) */
+
+}
+
+.intra-viols-pba {
+
+  background-color: #77cdefe9; /* Set the background color for Intra viols (SPV) */
+
+}
+
+.inter-viols-spv {
+
+  background-color: #f5649eef; /* Set the background color for Intra viols (SPV) */
+
+}
+
+.inter-viols-pba {
+
+  background-color: #fabb45ee; /* Set the background color for Intra viols (SPV) */
+
+}

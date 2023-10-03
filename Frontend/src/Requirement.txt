@@ -1,0 +1,1 @@
+npm i ag-grid-community ag-grid-enterprise ag-grid-react
