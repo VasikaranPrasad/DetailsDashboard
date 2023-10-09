@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { ThemeProvider } from '@mui/material/styles';
 // import { BrowserRouter, Route, Switch } from "react-router-dom"; // Import BrowserRouter and Route
 import { Routes, Route } from "react-router-dom";
 import Sidebar from "./Sidebar";
@@ -11,6 +12,8 @@ import Popup from "../contents/Popup";
 import CrossProbing from "../Displayfiles/CrossProbing";
 import FileProcessor from "../Displayfiles/FileProcessor";
 import FileVerification from "../Displayfiles/FileVerification";
+import FileViewer from "../Displayfiles/FileViewer";
+import GridExample from "../Displayfiles/GridExample";
 
 
 
@@ -76,6 +79,8 @@ const MainHome = () => {
           <Route path="/crossprobing" element={<CrossProbing />} />
           <Route path="/fileprocessor" element={<FileProcessor />} />
           <Route path="/fileverify" element={<FileVerification />} />
+          <Route path="/fileviewer" element={<FileViewer />} />
+          <Route path="/grid" element={<GridExample />} />
 
 
 

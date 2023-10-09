@@ -1,6 +1,7 @@
 /* Styles for the color selector and dropdown */
 .ag-theme-alpine  {
   --ag-header-height: 40px;
+    width: 100%;
     --ag-header-foreground-color: rgb(9, 9, 9);
     --ag-header-background-color: rgb(126, 215, 94);
     --ag-header-cell-hover-background-color: rgb(145, 224, 131);
@@ -33,60 +34,60 @@
 
   /* Timing */
   .typ_0p85v_85c_typ_max_IO{
-    background-color: rgb(191, 141, 237);
+    background-color: rgb(201, 151, 249);
   }
   .typ_0p85v_85c_typ_max_R2R{
-    background-color: rgba(225, 122, 178, 0.977);
+    background-color: rgba(249, 163, 210, 0.977);
   }
 
   /* Route */
   .Routing{
-    background-color: rgba(218, 216, 102, 0.789);
+    background-color: rgb(249, 249, 155);
   }
   .Congestion{
-    background-color: rgba(134, 141, 240, 0.889);
+    background-color: rgb(221, 244, 119);
   }
 
   /* Design */
 
 .Area{
-  background-color: rgba(237, 105, 132, 0.886);
+  background-color: rgb(148, 241, 136);
 }
 .Cell_Counts{
-  background-color: rgb(105, 210, 210);
+  background-color: rgb(113, 249, 169);
 }
 .Cell_Area{
-  background-color: rgba(150, 141, 205, 0.84);
+  background-color: rgba(96, 255, 118, 0.981);
 }
 .Cell_Flops{
-  background-color: rgba(11, 207, 158, 0.553);
+  background-color: rgba(121, 240, 210, 0.834);
 }
 .num_dcudp_datapathfubs{
-  background-color: rgba(114, 155, 190, 0.778);
+  background-color: rgb(145, 193, 234);
 }
 .Ports{
-  background-color: rgba(221, 160, 227, 0.912);
+  background-color: rgb(137, 240, 185);
 }
 
 /* Power */
 .Total_Z{
-  background-color: rgb(169, 211, 189);
+  background-color:  rgba(119, 165, 239, 0.997);
 }
 .Norm_ZAvg_ZAvgNorm_Z{
-  background-color: rgba(219, 198, 166, 0.792);
+  background-color: rgba(119, 165, 239, 0.997);
 }
 
 .svt{
-  background-color: rgba(158, 167, 187, 0.695);
+  background-color: rgb(196, 193, 248);
 }
 .ivt{
-  background-color: rgba(194, 223, 142, 0.921);
+  background-color: rgb(169, 150, 253);
 }
 .ivt_ll{
-  background-color: rgba(221, 149, 219, 0.484);
+  background-color: rgba(156, 156, 188, 0.981);
 }
 .Clk{
-  background-color: rgba(131, 230, 202, 0.788);
+  background-color: rgb(131, 230, 202);
 }
 .Constant_Switching_Activity{
   background-color: rgb(152, 212, 212);
@@ -107,66 +108,145 @@
     white-space: normal !important;
   }
 
+/* Add 3D styles to your button classes */
+.purple-button,
+.red-button,
+.green-button,
+.yellow-button,
+.blue-button,
+.orange-button,
+.gray-button {
+  color: #fff;
+  padding: 3px ;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  box-shadow: 2px 2px 4px rgba(3, 3, 3, 0.2);
+}
 
-/* Add these styles to your CSS file */
+.purple-button {
+  background-color: rgb(234, 79, 240);
+}
 .red-button {
-  background-color: rgb(226, 163, 163);
-  color: rgb(9, 9, 9);
-  
+  background-color: rgb(238, 128, 128);
 }
 
 .green-button {
-  background-color: rgb(154, 229, 154);
-  color: rgb(9, 9, 9);
+  background-color: rgb(100, 242, 100);
 }
 
 .yellow-button {
-  background-color: rgb(229, 229, 150);
-  color: black; /* Adjust text color as needed */
+  background-color: rgb(239, 239, 114);
+  color: black;
 }
 
 .blue-button {
-  background-color: rgb(189, 189, 234);
-  color: rgb(9, 9, 9);
+  background-color: rgb(140, 140, 239);
 }
 
 .orange-button {
-  background-color: rgb(210, 225, 165);
-  color: rgb(9, 9, 9);
+  background-color: rgb(249, 157, 111);
 }
 
 .gray-button {
-  background-color: rgb(193, 240, 233);
-  color: rgb(9, 9, 9);
+  background-color: rgb(112, 251, 230);
+}
+
+/* Adjust the hover effect for the buttons */
+.purple-button:hover,
+.red-button:hover,
+.green-button:hover,
+.yellow-button:hover,
+.blue-button:hover,
+.orange-button:hover,
+.gray-button:hover {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  transform: translate(-1px, -1px);
 }
 
 
 
-.category-button {
-  cursor: pointer; /* Change cursor to a hand symbol on hover */
-  margin-right: 5px;
+/* Styles for the blue round icon */
+
+.blue-round-icon {
+  background-color: rgb(128, 128, 231);
+  color: rgb(255, 255, 255);
+  /* color: black; */
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border: 1px solid #095b9d; /* Add border for 3D effect */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Add a smooth transform animation on hover */
+
+  /* Hover effect */
+  &:hover {
+    transform: translateY(-2px); /* Move the button up slightly on hover for click effect */
+  }
+
+  /* Active (clicked) effect */
+  &:active {
+    transform: translateY(1px); /* Move the button down slightly when clicked */
+  }
+}
+/* Styles to initially hide the category buttons container */
+.categoryButtonsContainer {
+  display: none;
 }
 
-.intra-viols-spv {
-
-  background-color: #c4a2f1f2; /* Set the background color for Intra viols (SPV) */
-
+/* Styles to make the category buttons container visible when 'visible' class is applied */
+.categoryButtonsContainer.visible {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap within the container */
+  justify-content: flex-end;
+  padding-right: 20px;
+  
 }
 
-.intra-viols-pba {
+/* Styles for the header-right container */
+.header-right {
+  display: flex;
+  justify-content: space-between; /* To place items at each end of the container */
+  align-items: center; /* Vertically center the filter input and icon */
 
-  background-color: #77cdefe9; /* Set the background color for Intra viols (SPV) */
-
+ 
 }
 
-.inter-viols-spv {
 
-  background-color: #f5649eef; /* Set the background color for Intra viols (SPV) */
-
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+ 
 }
 
-.inter-viols-pba {
+.filter-container {
+  display: flex;
+  align-items: center;
+}
 
-  background-color: #fabb45ee; /* Set the background color for Intra viols (SPV) */
+.filter-input {
+  /* Your filter input styles */
+  margin-right: 10px; /* Add spacing between input and count */
+}
 
+
+/* Add styles to your h3 header tag */
+h3 {
+  font-family: Arial, sans-serif; /* Choose a suitable font-family */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #000000; /* Choose a suitable text color */
+  margin-bottom: 20px; /* Add spacing below the header */
+  text-transform: uppercase; /* Optionally, make text uppercase */
+  padding-left: 10px;
 }
