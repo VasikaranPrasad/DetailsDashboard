@@ -1,0 +1,923 @@
+Generating Timing information
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Design Scenario func_ssgnp_0p675v_m40c_rcworst_CCworst_T (Mode func Corner
+ssgnp_0p675v_m40c_rcworst_CCworst_T)
+Running High Resistance Flow
+Generating Timing information ... Done
+[End of Generating Timing Information] Elapsed real time: 0:08:51
+[End of Generating Timing Information] Elapsed cpu time: sys=1:09:47 usr=0:34:23 total=1:44:11
+Start Global Route ...
+[Init] Elapsed real time: 0:00:00
+[Init] Elapsed cpu time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used 0 Alloctr 0 Proc 0
+[Init] Total (MB): Used 7 Alloctr 8 Proc 65495
+Info: route.global.delay_based_route_rejection is 16.
+Begin global routing.
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Two layer enclosure iso-dense via enclosure rule is defined.
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M15
+Information: Applying settings based on technology node 7
+Found antenna rule mode 1, diode mode 1:
+        layer M0: , diode ratio {0 0 1 0 0}
+        layer M1: , diode ratio {0 0 1 0 0}
+        layer M2: , diode ratio {0 0 1 0 0}
+        layer M3: , diode ratio {0 0 1 0 0}
+        layer M4: , diode ratio {0 0 1 0 0}
+        layer M5: , diode ratio {0 0 1 0 0}
+        layer M6: , diode ratio {0 0 1 0 0}
+        layer M7: , diode ratio {0 0 1 0 0}
+        layer M8: , diode ratio {0 0 1 0 0}
+        layer M9: , diode ratio {0 0 1 0 0}
+        layer M10: , diode ratio {0 0 1 0 0}
+        layer M11: , diode ratio {0 0 1 0 0}
+        layer M12: , diode ratio {0 0 1 0 0}
+        layer M13: , diode ratio {0 0 1 0 0}
+        layer M14: , diode ratio {0 0 1 0 0}
+        layer M15: , diode ratio {0 0 1 0 0}
+        layer AP: , diode ratio {0 0 1 0 0}
+        layer VIA0: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA1: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA2: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA3: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA4: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA5: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA6: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA7: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA8: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA9: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA10: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA11: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA12: max ratio 20, diode ratio {0 0 1 0 0}
+        layer VIA13: max ratio 20, diode ratio {0 0 1 0 0}
+      layer VIA14: max ratio 20, diode ratio {0 0 1 0 0}
+      layer RV: max ratio 20, diode ratio {0 0 1 0 0}
+Found antenna rule mode 2, diode mode 16:
+      layer M0: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M1: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M2: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M3: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M4: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M5: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M6: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M7: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M8: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M9: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M10: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M11: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M12: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M13: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M14: max ratio 5000 metal scale 1, diode ratio {0 0 0 5000 0 0.03 0.5 7.6}
+      layer M15: max ratio 5000 metal scale 1, diode ratio {0 0 8000 50000 0 0 0 0}
+      layer AP: max ratio 10000 metal scale 1, diode ratio {0 0 0 10000 0 0 0 0}
+      layer VIA0: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA1: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA2: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA3: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA4: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA5: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA6: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA7: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA8: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA9: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA10: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA11: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA12: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA13: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer VIA14: max ratio 10000 cut scale 1, diode ratio {0 0 0 50 0 0.03 5 17}
+      layer RV: max ratio 200 cut scale 1, diode ratio {0 0 83 400 0 0 0 0}
+Found antenna rule mode 3, diode mode 20:
+      layer M0: , diode ratio {0 0 1 0 0}
+      layer M1: , diode ratio {0 0 1 0 0}
+      layer M2: , diode ratio {0 0 1 0 0}
+      layer M3: , diode ratio {0 0 1 0 0}
+      layer M4: , diode ratio {0 0 1 0 0}
+      layer M5: , diode ratio {0 0 1 0 0}
+      layer M6: , diode ratio {0 0 1 0 0}
+      layer M7: , diode ratio {0 0 1 0 0}
+      layer M8: , diode ratio {0 0 1 0 0}
+      layer M9: , diode ratio {0 0 1 0 0}
+      layer M10: , diode ratio {0 0 1 0 0}
+      layer M11: , diode ratio {0 0 1 0 0}
+      layer M12: , diode ratio {0 0 1 0 0}
+      layer M13: , diode ratio {0 0 1 0 0}
+      layer M14: , diode ratio {0 0 1 0 0}
+      layer M15: , diode ratio {0 0 1 0 0}
+      layer AP: , diode ratio {0 0 1 0 0}
+      layer VIA0: , diode ratio {0 0 1 0 0}
+      layer VIA1: , diode ratio {0 0 1 0 0}
+      layer VIA2: , diode ratio {0 0 1 0 0}
+      layer VIA3: , diode ratio {0 0 1 0 0}
+      layer VIA4: , diode ratio {0 0 1 0 0}
+      layer VIA5: , diode ratio {0 0 1 0 0}
+      layer VIA6: , diode ratio {0 0 1 0 0}
+      layer VIA7: , diode ratio {0 0 1 0 0}
+      layer VIA8: , diode ratio {0 0 1 0 0}
+      layer VIA9: , diode ratio {0 0 1 0 0}
+      layer VIA10: , diode ratio {0 0 1 0 0}
+      layer VIA11: , diode ratio {0 0 1 0 0}
+      layer VIA12: , diode ratio {0 0 1 0 0}
+      layer VIA13: , diode ratio {0 0 1 0 0}
+      layer VIA14: , diode ratio {0 0 1 0 0}
+      layer RV: , diode ratio {0 0 1 0 0}
+Found antenna rule mode 5, diode mode 4:
+      layer M0: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M1: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M2: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M3: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M4: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M5: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M6: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M7: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M8: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M9: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M10: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M11: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M12: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M13: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M14: metal scale 1, diode ratio {0 0 1 0 0}
+      layer M15: metal scale 1, diode ratio {0 0 1 0 0}
+      layer AP: max ratio 2000 metal scale 1, diode ratio {0 0 8000 30000}
+      layer VIA0: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA1: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA2: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA3: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA4: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA5: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA6: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA7: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA8: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA9: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA10: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA11: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA12: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA13: cut scale 1, diode ratio {0 0 1 0 0}
+      layer VIA14: cut scale 1, diode ratio {0 0 1 0 0}
+      layer RV: cut scale 1, diode ratio {0 0 1 0 0}
+Force end on preferred grid is disabled, and metal shapes are now allowed to end at any location.
+Warning: Option route.detail.force_end_on_preferred_grid is set to false, reset
+route.detail.enable_end_off_preferred_grid_patching_on_fixed_shapes to false with this setting.
+(ZRT-624)
+Warning: Using color based dpt flow for layer M0 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M1 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M2 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M3 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M4 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M5 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M6 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M7 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M8 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M9 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M10 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M11 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M12 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M13 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M14 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer M15 since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Using color based dpt flow for layer AP since the option
+route.common.color_based_dpt_flow is set as true.
+The option route.common.color_based_dpt_flow_by_layer_name will be ignored.
+Warning: Top level routing blockage on layer M11 at (305.329 1.170) (305.825 846.654) is not
+marked as zero spacing. This may impact runtime of routing. (ZRT-658)
+Skipping 23 internal pins that are not physical. Set route.common.verbose_level to > 0 and run
+routing command to get skipped pin names.
+Info: number of net_type_blockage: 1756
+Information: Via ladder engine would be activated for pattern must join connection in certain
+commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA9) needs more than one tracks
+Warning: Layer M9 pitch 0.076 may be too small: wire/via-down 0.076, wire/via-up 0.114. (ZRT-
+026)
+Via on layer (VIA11) needs more than one tracks
+Warning: Layer M11 pitch 0.126 may be too small: wire/via-down 0.126, wire/via-up 0.173. (ZRT-
+026)
+Via on layer (VIA13) needs more than one tracks
+Warning: Layer M13 pitch 0.252 may be too small: wire/via-down 0.252, wire/via-up 0.414. (ZRT-
+026)
+Via on layer (RV) needs more than one tracks
+Warning: Layer M15 pitch 0.900 may be too small: wire/via-down 0.900, wire/via-up 2.475. (ZRT-
+026)
+Via on layer (RV) needs more than one tracks
+Warning: Layer AP pitch 3.600 may be too small: wire/via-down 4.500, wire/via-up 3.600. (ZRT-
+026)
+Transition layer name: M9(9)
+Transition layer name: M11(11)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of
+length 0.75 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of
+length 0.75 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin.
+(ZRT-706)
+Warning: The value of
+route.common.extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name is different from
+default value or mega switch value. Please make sure the value is expected. (ZRT-704)
+Warning: The value of route.common.extra_via_cost_multiplier_by_layer_name is different from
+default value or mega switch value. Please make sure the value is expected. (ZRT-704)
+soft rule leaf_2w_2s_2_4_wire is redundant
+soft rule root_2w_2s_2_4_wire is redundant
+soft rule internal_2w_2s_2_4_wire is redundant
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:34
+[End of Read DB] Elapsed cpu time: sys=0:00:38 usr=0:03:12 total=0:03:50
+[End of Read DB] Stage (MB): Used 2574 Alloctr 2598 Proc 32
+[End of Read DB] Total (MB): Used 2581 Alloctr 2607 Proc 65527
+Info: route.global.delay_based_route_rejection is 16.
+Printing options for 'route.common.*'
+common.advance_node_timing_driven_mode                     : true
+common.color_based_dpt_flow                        : true
+common.connect_within_pins_by_layer_name                   : {M0 via_wire_all_pins} {M1 off}
+common.extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name: {M4 3} {M5 3}
+{M6 3} {M7 3} {M8 3} {M9 3}
+common.extra_via_cost_multiplier_by_layer_name       : {VIA0 1} {VIA1 1} {VIA2 1} {VIA3
+1} {VIA4 1} {VIA5 1} {VIA6 1} {VIA7 1} {VIA8 1} {VIA9 1} {VIA10 1} {VIA11 1} {VIA12
+1} {VIA13 1} {VIA14 1} {RV 1}
+common.global_min_layer_mode                   :       hard
+common.ignore_var_spacing_to_pg                 :      true
+common.net_min_layer_mode                     : allow_pin_connection
+common.route_top_boundary_mode                    :    stay_half_min_space_inside
+common.threshold_noise_ratio                 : 0.15
+common.via_array_mode                      :     off
+
+Printing options for 'route.global.*'
+global.macro_boundary_track_utilization          :      75
+global.macro_corner_track_utilization          : 75
+global.timing_driven                    :        true
+
+Loading timing information to the router from design
+Timing information loaded to the router.
+[End of Loading Timing] Elapsed real time: 0:00:09
+[End of Loading Timing] Elapsed cpu time: sys=0:00:01 usr=0:00:09 total=0:00:10
+Constructing data structure ...
+Global cell size is adjusted to 2.0 times of standard cell row height.
+Through wire capacity modelling up to layer metal 2
+Design statistics:
+Design Bounding Box (0.00um,0.00um,306.43um,847.68um)
+Number of routing layers = 17
+layer M0, dir Hor, min width = 0.02um, min space = 0.02um pitch = 0.04um
+layer M1, dir Ver, min width = 0.034um, min space = 0.02um pitch = 0.057um
+layer M2, dir Hor, min width = 0.02um, min space = 0.02um pitch = 0.04um
+layer M3, dir Ver, min width = 0.02um, min space = 0.02um pitch = 0.044um
+layer M4, dir Hor, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M5, dir Ver, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M6, dir Hor, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M7, dir Ver, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M8, dir Hor, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M9, dir Ver, min width = 0.038um, min space = 0.038um pitch = 0.076um
+layer M10, dir Hor, min width = 0.062um, min space = 0.064um pitch = 0.126um
+layer M11, dir Ver, min width = 0.062um, min space = 0.064um pitch = 0.126um
+layer M12, dir Hor, min width = 0.126um, min space = 0.126um pitch = 0.252um
+layer M13, dir Ver, min width = 0.126um, min space = 0.126um pitch = 0.252um
+layer M14, dir Hor, min width = 0.45um, min space = 0.45um pitch = 0.9um
+layer M15, dir Ver, min width = 0.45um, min space = 0.45um pitch = 0.9um
+layer AP, dir Hor, min width = 1.8um, min space = 1.8um pitch = 3.6um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00
+[End of Build Tech Data] Elapsed cpu time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used 42 Alloctr 41 Proc 0
+[End of Build Tech Data] Total (MB): Used 2895 Alloctr 2922 Proc 65527
+Net statistics:
+Total number of nets = 1209772
+Number of nets to route = 1209691
+Number of single or zero port nets = 79
+Number of nets with min-layer-mode soft = 175
+Number of nets with min-layer-mode soft-cost-low = 175
+Number of nets with min-layer-mode allow-pin-conn = 3905
+2 nets are fully connected,
+ of which 2 are detail routed and 0 are global routed.
+195 nets have non-default rule internal_2w_2s
+        195 non-user-specified nets, 0 non-user-specified clock nets, 0 user-specified nets
+3681 nets have non-default rule leaf_2w_2s
+        3681 non-user-specified nets, 0 non-user-specified clock nets, 0 user-specified nets
+29 nets have non-default rule root_2w_2s
+        29 non-user-specified nets, 0 non-user-specified clock nets, 0 user-specified nets
+Net length statistics:
+Net Count(Ignore Fully Rted) 1209691, Total Half Perimeter Wire Length (HPWL) 12715775
+microns
+HPWL 0 ~ 50 microns: Net Count 1143967               Total HPWL 6663905 microns
+HPWL 50 ~ 100 microns: Net Count 44359               Total HPWL 3121561 microns
+HPWL 100 ~ 200 microns: Net Count 20403              Total HPWL 2682430 microns
+HPWL 200 ~ 300 microns: Net Count 850                Total HPWL       192765 microns
+HPWL 300 ~ 400 microns: Net Count           50       Total HPWL        16197 microns
+HPWL 400 ~ 500 microns: Net Count            8       Total HPWL         3483 microns
+HPWL 500 ~ 600 microns: Net Count           22       Total HPWL        12061 microns
+HPWL 600 ~ 700 microns: Net Count           16       Total HPWL        10322 microns
+HPWL 700 ~ 800 microns: Net Count           11       Total HPWL         8371 microns
+HPWL 800 ~ 900 microns: Net Count            2       Total HPWL         1700 microns
+HPWL 900 ~ 1000 microns: Net Count            1      Total HPWL          931 microns
+HPWL > 1000 microns: Net Count              2 Total HPWL       2050 microns
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:03
+[End of Build All Nets] Elapsed cpu time: sys=0:00:01 usr=0:00:11 total=0:00:13
+[End of Build All Nets] Stage (MB): Used 699 Alloctr 708 Proc 0
+[End of Build All Nets] Total (MB): Used 3594 Alloctr 3630 Proc 65527
+Number of partitions: 10 (2 x 5)
+Size of partitions: 384 gCells x 384 gCells
+Average gCell capacity 2.58 on layer (1) M0
+Average gCell capacity 6.17 on layer (2) M1
+Average gCell capacity 11.49          on layer (3) M2
+Average gCell capacity 10.62          on layer (4) M3
+Average gCell capacity 6.08 on layer (5) M4
+Average gCell capacity 5.92 on layer (6) M5
+Average gCell capacity 6.09 on layer (7) M6
+Average gCell capacity 5.92 on layer (8) M7
+Average gCell capacity 5.62 on layer (9) M8
+Average gCell capacity 3.70 on layer (10) M9
+Average gCell capacity 2.82 on layer (11) M10
+Average gCell capacity 2.83 on layer (12) M11
+Average gCell capacity 1.30 on layer (13) M12
+Average gCell capacity 0.97 on layer (14) M13
+Average gCell capacity 0.00 on layer (15) M14
+Average gCell capacity 0.00 on layer (16) M15
+Average gCell capacity 0.13 on layer (17) AP
+Average number of tracks per gCell 10.02 on layer (1) M0
+Average number of tracks per gCell 8.43       on layer (2) M1
+Average number of tracks per gCell 12.00 on layer (3) M2
+Average number of tracks per gCell 10.92 on layer (4) M3
+Average number of tracks per gCell 6.32       on layer (5) M4
+Average number of tracks per gCell 6.32       on layer (6) M5
+Average number of tracks per gCell 6.32       on layer (7) M6
+Average number of tracks per gCell 6.32       on layer (8) M7
+Average number of tracks per gCell 6.32       on layer (9) M8
+Average number of tracks per gCell 6.32       on layer (10) M9
+Average number of tracks per gCell 3.81       on layer (11) M10
+Average number of tracks per gCell 3.82       on layer (12) M11
+Average number of tracks per gCell 1.91       on layer (13) M12
+Average number of tracks per gCell 1.91       on layer (14) M13
+Average number of tracks per gCell 0.53       on layer (15) M14
+Average number of tracks per gCell 0.53       on layer (16) M15
+Average number of tracks per gCell 0.13       on layer (17) AP
+Number of gCells = 19154036
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:14
+[End of Build Congestion Map] Elapsed cpu time: sys=0:00:11 usr=0:01:07 total=0:01:19
+[End of Build Congestion Map] Stage (MB): Used 416 Alloctr 421 Proc 0
+[End of Build Congestion Map] Total (MB): Used 4010 Alloctr 4051 Proc 65527
+Number of partitions: 10 (2 x 5)
+Size of partitions: 384 gCells x 384 gCells
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00
+[End of Add Nets Demand] Elapsed cpu time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used 51 Alloctr 51 Proc 0
+[End of Add Nets Demand] Total (MB): Used 4062 Alloctr 4103 Proc 65527
+Number of user frozen nets = 0
+Timing criticality report: total 514308 (42.51)% critical nets.
+  Number of criticality 1 nets = 159331 (13.17)%
+  Number of criticality 2 nets = 135193 (11.18)%
+  Number of criticality 3 nets = 94689 (7.83)%
+  Number of criticality 4 nets = 58951 (4.87)%
+  Number of criticality 5 nets = 29432 (2.43)%
+  Number of criticality 6 nets = 16054 (1.33)%
+  Number of criticality 7 nets = 20658 (1.71)%
+Information: RC layer preference is turned on for this design. (ZRT-613)
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:55
+[End of Build Data] Elapsed cpu time: sys=0:00:15 usr=0:01:55 total=0:02:11
+[End of Build Data] Stage (MB): Used 1405 Alloctr 1417 Proc 0
+[End of Build Data] Total (MB): Used 4258 Alloctr 4297 Proc 65527
+Number of partitions: 10 (2 x 5)
+Size of partitions: 384 gCells x 384 gCells
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:58
+[End of Blocked Pin Detection] Elapsed cpu time: sys=0:00:04 usr=0:03:09 total=0:03:13
+[End of Blocked Pin Detection] Stage (MB): Used 371 Alloctr 369 Proc 0
+[End of Blocked Pin Detection] Total (MB): Used 4434 Alloctr 4473 Proc 65527
+Information: Using 16 threads for routing. (ZRT-444)
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~254.0000um (529 gCells)
+
+Start GR phase 0
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+10% of nets complete Elapsed cpu time: 0:00:31 Elapsed real time: 0:00:12
+20% of nets complete Elapsed cpu time: 0:01:10 Elapsed real time: 0:00:14
+30% of nets complete Elapsed cpu time: 0:01:44 Elapsed real time: 0:00:16
+40% of nets complete Elapsed cpu time: 0:02:27 Elapsed real time: 0:00:19
+50% of nets complete Elapsed cpu time: 0:03:44 Elapsed real time: 0:00:29
+60% of nets complete Elapsed cpu time: 0:04:40 Elapsed real time: 0:00:33
+70% of nets complete Elapsed cpu time: 0:08:02 Elapsed real time: 0:00:50
+80% of nets complete Elapsed cpu time: 0:10:03 Elapsed real time: 0:01:01
+90% of nets complete Elapsed cpu time: 0:12:54 Elapsed real time: 0:01:20
+[rtAllBotParts] Elapsed real time: 0:06:32
+[rtAllBotParts] Elapsed cpu time: sys=0:00:27 usr=0:25:19 total=0:25:46
+[rtTop] Elapsed real time: 0:00:01
+[rtTop] Elapsed cpu time: sys=0:00:00 usr=0:00:01 total=0:00:01
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:04
+[updNetsDmd] Elapsed cpu time: sys=0:00:09 usr=0:00:40 total=0:00:49
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:06:37
+[End of Initial Routing] Elapsed cpu time: sys=0:00:37 usr=0:26:00 total=0:26:37
+[End of Initial Routing] Stage (MB): Used 817 Alloctr 817 Proc 794
+[End of Initial Routing] Total (MB): Used 5251 Alloctr 5294 Proc 66321
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap = 3740 Max = 12 GRCs = 2143 (0.10%)
+Initial. H routing: Dmd-Cap = 333 Max = 8 (GRCs = 2) GRCs = 248 (0.02%)
+Initial. V routing: Dmd-Cap = 3406 Max = 12 (GRCs = 1) GRCs = 1895 (0.17%)
+Initial. Both Dirs: Overflow = 314065 Max = 8 GRCs = 248640 (11.03%)
+Initial. H routing: Overflow = 53845 Max = 8 (GRCs = 1) GRCs = 47578 (4.22%)
+Initial. V routing: Overflow = 260219 Max = 8 (GRCs = 2) GRCs = 201062 (17.85%)
+Initial. M0       Overflow =     0 Max = 0 (GRCs = 0) GRCs =      0 (0.00%)
+Initial. M1       Overflow = 48344 Max = 5 (GRCs = 21) GRCs = 46744 (4.15%)
+Initial. M2       Overflow = 14129 Max = 8 (GRCs = 1) GRCs = 14998 (1.33%)
+Initial. M3       Overflow = 1149 Max = 5 (GRCs = 1) GRCs = 1401 (0.12%)
+Initial. M4       Overflow = 21463 Max = 6 (GRCs = 2) GRCs = 18629 (1.65%)
+Initial. M5       Overflow = 50772 Max = 8 (GRCs = 2) GRCs = 36735 (3.26%)
+Initial. M6       Overflow = 7438 Max = 7 (GRCs = 3) GRCs = 5846 (0.52%)
+Initial. M7       Overflow = 37172 Max = 6 (GRCs = 1) GRCs = 25857 (2.29%)
+Initial. M8       Overflow = 3736 Max = 4 (GRCs = 1) GRCs = 3226 (0.29%)
+Initial. M9       Overflow = 20376 Max = 6 (GRCs = 1) GRCs = 14950 (1.33%)
+Initial. M10      Overflow = 2542 Max = 4 (GRCs = 1) GRCs = 2102 (0.19%)
+Initial. M11      Overflow = 78311 Max = 5 (GRCs = 18) GRCs = 54973 (4.88%)
+Initial. M12      Overflow = 4536 Max = 3 (GRCs = 255) GRCs = 2777 (0.25%)
+Initial. M13      Overflow = 24093 Max = 4 (GRCs = 2) GRCs = 20402 (1.81%)
+Initial. M14      Overflow =      0 Max = 0 (GRCs = 0) GRCs =      0 (0.00%)
+Initial. M15      Overflow =      0 Max = 0 (GRCs = 0) GRCs =      0 (0.00%)
+Initial. AP      Overflow =     0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+Density distribution:
+Layer 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 > 1.2
+M0     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M1     8.68 2.83 2.97 6.21 0.95 12.8 10.9 4.96 3.38 0.00 43.2 0.17 0.68 2.13
+M2     9.54 9.75 12.1 14.4 13.2 18.9 8.45 6.59 3.84 1.72 1.14 0.14 0.04 0.02
+M3     7.53 9.91 11.1 19.6 14.2 15.2 11.1 6.82 3.19 0.85 0.25 0.02 0.00 0.00
+M4     5.52 9.44 2.89 14.5 3.91 19.9 17.4 3.49 14.2 0.00 6.96 0.99 0.37 0.22
+M5     4.60 7.50 3.05 10.4 2.79 16.2 17.3 6.05 18.6 0.00 10.2 1.69 0.59 0.78
+M6     13.7 19.9 4.26 19.3 4.17 17.1 10.8 1.80 6.01 0.00 2.21 0.27 0.12 0.11
+M7     4.63 9.31 4.61 11.8 3.20 16.2 14.4 6.65 18.4 0.00 8.44 0.92 0.52 0.79
+M8     25.4 26.2 7.39 18.5 2.84 8.66 5.78 1.52 1.83 0.00 1.46 0.02 0.13 0.14
+M9     36.6 5.41 3.21 10.3 1.76 13.0 10.2 3.93 9.24 0.00 4.98 0.41 0.17 0.68
+M10     54.9 0.00 16.4 7.59 0.00 12.5 2.24 3.76 0.00 0.00 2.20 0.00 0.07 0.11
+M11     32.0 0.06 9.34 5.95 0.00 15.2 5.41 11.6 0.00 0.00 15.5 0.00 2.03 2.82
+M12     82.7 0.00 0.00 0.00 0.00 14.6 0.00 0.00 0.00 0.00 2.29 0.00 0.00 0.25
+M13     80.9 0.00 0.00 0.00 0.00 9.90 0.00 0.00 0.00 0.00 7.37 0.00 0.00 1.81
+M14     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M15     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+AP     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+Total 45.1 5.91 4.56 8.17 2.77 11.2 6.72 3.36 4.64 0.15 6.26 0.27 0.28 0.58
+
+
+Initial. Total Wire Length = 13091287.03
+Initial. Layer M0 wire length = 0.00
+Initial. Layer M1 wire length = 592866.02
+Initial. Layer M2 wire length = 1822079.38
+Initial. Layer M3 wire length = 1923140.66
+Initial. Layer M4 wire length = 1329609.43
+Initial. Layer M5 wire length = 1578705.12
+Initial. Layer M6 wire length = 985710.23
+Initial. Layer M7 wire length = 1710942.16
+Initial. Layer M8 wire length = 715379.49
+Initial. Layer M9 wire length = 994076.61
+Initial. Layer M10 wire length = 357389.20
+Initial. Layer M11 wire length = 832437.52
+Initial. Layer M12 wire length = 98861.36
+Initial. Layer M13 wire length = 150089.84
+Initial. Layer M14 wire length = 0.00
+Initial. Layer M15 wire length = 0.00
+Initial. Layer AP wire length = 0.00
+Initial. Total Number of Contacts = 8372411
+Initial. Via VIA01 count = 0
+Initial. Via VIA12_1cut_BW37_UW20 count = 4362414
+Initial. Via VIA23_1cut_BW20_UW24 count = 2064790
+Initial. Via VIA34_1cut_BW24_UW38_ISO count = 750308
+Initial. Via VIA45_1cut_BW38_UW38_ISO count = 466096
+Initial. Via VIA56_1cut_BW38_UW38_ISO count = 285268
+Initial. Via VIA67_1cut_BW38_UW38_ISO count = 178337
+Initial. Via VIA78_1cut_BW38_UW38_ISO count = 104414
+Initial. Via VIA89_1cut_BW38_UW38_ISO count = 75709
+Initial. Via VIA910_1cut count = 37265
+Initial. Via VIA1011_1cut count = 35180
+Initial. Via VIA1112_1cut count = 7070
+Initial. Via VIA1213_1cut count = 5560
+Initial. Via VIA1314_1cut count = 0
+Initial. Via VIA1415_1cut count = 0
+Initial. Via VIA15AP count = 0
+Initial. Number of intra gCell short connections modeled 693627
+Initial. Number of inter gCell short connections modeled 86393
+Initial. Number of blockage aware short connections modeled 48271
+Initial. completed.
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:05
+[updNetsDmd] Elapsed cpu time: sys=0:00:22 usr=0:00:42 total=0:01:05
+
+Start GR phase 1
+Wed Aug 30 21:51:15 2023
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+10% of nets complete Elapsed cpu time: 0:13:00 Elapsed real time: 0:01:38
+20% of nets complete Elapsed cpu time: 0:18:06 Elapsed real time: 0:02:32
+30% of nets complete Elapsed cpu time: 0:18:40 Elapsed real time: 0:02:34
+40% of nets complete Elapsed cpu time: 0:19:26 Elapsed real time: 0:02:37
+50% of nets complete Elapsed cpu time: 0:20:25 Elapsed real time: 0:02:41
+60% of nets complete Elapsed cpu time: 0:20:50 Elapsed real time: 0:02:42
+70% of nets complete Elapsed cpu time: 0:21:24 Elapsed real time: 0:02:44
+80% of nets complete Elapsed cpu time: 0:22:08 Elapsed real time: 0:02:47
+90% of nets complete Elapsed cpu time: 0:23:05 Elapsed real time: 0:02:51
+[rtAllParts] Elapsed real time: 0:03:13
+[rtAllParts] Elapsed cpu time: sys=0:01:05 usr=0:25:12 total=0:26:17
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:04
+[updNetsDmd] Elapsed cpu time: sys=0:00:05 usr=0:00:43 total=0:00:49
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:03:17
+[End of Phase1 Routing] Elapsed cpu time: sys=0:01:10 usr=0:25:55 total=0:27:06
+[End of Phase1 Routing] Stage (MB): Used 117 Alloctr 145 Proc 331
+[End of Phase1 Routing] Total (MB): Used 5369 Alloctr 5440 Proc 66652
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap = 5 Max = 3 GRCs = 10 (0.00%)
+phase1. H routing: Dmd-Cap = 4 Max = 3 (GRCs = 1) GRCs = 7 (0.00%)
+phase1. V routing: Dmd-Cap = 1 Max = 1 (GRCs = 3) GRCs = 3 (0.00%)
+phase1. Both Dirs: Overflow = 31646 Max = 5 GRCs = 28486 (1.26%)
+phase1. H routing: Overflow = 3695 Max = 5 (GRCs = 1) GRCs = 3678 (0.33%)
+phase1. V routing: Overflow = 27950 Max = 5 (GRCs = 2) GRCs = 24808 (2.20%)
+phase1. M0        Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase1. M1        Overflow = 15051 Max = 4 (GRCs = 13) GRCs = 15053 (1.34%)
+phase1. M2        Overflow = 990 Max = 5 (GRCs = 1) GRCs = 1704 (0.15%)
+phase1. M3        Overflow = 6 Max = 1 (GRCs = 13) GRCs = 13 (0.00%)
+phase1. M4        Overflow = 605 Max = 2 (GRCs = 5) GRCs = 615 (0.05%)
+phase1. M5        Overflow = 2030 Max = 5 (GRCs = 2) GRCs = 1645 (0.15%)
+phase1. M6      Overflow = 116 Max = 3 (GRCs = 4) GRCs = 106 (0.01%)
+phase1. M7      Overflow = 73 Max = 3 (GRCs = 1) GRCs = 68 (0.01%)
+phase1. M8      Overflow = 29 Max = 1 (GRCs = 29) GRCs = 29 (0.00%)
+phase1. M9      Overflow = 2164 Max = 3 (GRCs = 35) GRCs = 1642 (0.15%)
+phase1. M10      Overflow = 50 Max = 3 (GRCs = 7) GRCs = 33 (0.00%)
+phase1. M11      Overflow = 7053 Max = 3 (GRCs = 49) GRCs = 4973 (0.44%)
+phase1. M12      Overflow = 1904 Max = 3 (GRCs = 130) GRCs = 1191 (0.11%)
+phase1. M13      Overflow = 1572 Max = 2 (GRCs = 158) GRCs = 1414 (0.13%)
+phase1. M14      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase1. M15      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase1. AP      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+
+
+Density distribution:
+Layer 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 > 1.2
+M0     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M1     9.04 2.68 2.92 6.45 0.99 13.9 11.6 5.41 3.85 0.00 42.0 0.06 0.23 0.75
+M2     8.68 9.09 11.7 14.4 13.7 20.4 9.50 8.07 3.65 0.53 0.15 0.01 0.00 0.00
+M3     6.32 7.72 9.15 17.4 14.4 17.5 14.4 9.27 3.29 0.36 0.01 0.00 0.00 0.00
+M4     4.64 8.62 2.74 14.5 4.14 21.1 19.2 3.78 14.9 0.00 6.23 0.03 0.02 0.00
+M5     3.76 6.87 2.85 10.0 2.81 16.4 17.9 6.70 21.6 0.00 10.8 0.07 0.05 0.03
+M6     11.6 19.4 4.31 19.9 4.68 18.5 11.7 1.89 6.12 0.00 1.71 0.00 0.00 0.00
+M7     3.86 8.51 4.40 11.3 3.27 16.4 14.7 7.26 21.0 0.00 9.06 0.00 0.00 0.00
+M8     22.6 26.4 7.87 19.6 3.17 9.39 6.21 1.61 1.65 0.00 1.29 0.00 0.00 0.00
+M9     37.0 5.64 3.18 10.2 1.87 13.5 11.2 4.34 9.03 0.00 3.79 0.01 0.00 0.13
+M10     51.4 0.00 18.2 7.80 0.00 14.0 2.49 3.96 0.00 0.00 1.98 0.00 0.00 0.00
+M11     30.2 0.05 9.53 5.91 0.00 16.4 6.00 14.0 0.00 0.00 17.3 0.00 0.10 0.33
+M12     81.0 0.00 0.00 0.00 0.00 16.6 0.00 0.00 0.00 0.00 2.22 0.00 0.00 0.11
+M13     80.2 0.00 0.00 0.01 0.00 13.3 0.00 0.00 0.00 0.00 6.26 0.00 0.00 0.13
+M14     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M15     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+AP     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+Total 44.1 5.59 4.53 8.11 2.89 12.2 7.36 3.91 5.01 0.05 6.05 0.01 0.02 0.09
+
+
+phase1. Total Wire Length = 13126225.60
+phase1. Layer M0 wire length = 0.00
+phase1. Layer M1 wire length = 558695.36
+phase1. Layer M2 wire length = 1796462.62
+phase1. Layer M3 wire length = 2044668.50
+phase1. Layer M4 wire length = 1318396.51
+phase1. Layer M5 wire length = 1582777.52
+phase1. Layer M6 wire length = 1004161.27
+phase1. Layer M7 wire length = 1722640.43
+phase1. Layer M8 wire length = 731587.23
+phase1. Layer M9 wire length = 943258.07
+phase1. Layer M10 wire length = 377157.55
+phase1. Layer M11 wire length = 809400.26
+phase1. Layer M12 wire length = 106012.44
+phase1. Layer M13 wire length = 131007.86
+phase1. Layer M14 wire length = 0.00
+phase1. Layer M15 wire length = 0.00
+phase1. Layer AP wire length = 0.00
+phase1. Total Number of Contacts = 8689635
+phase1. Via VIA01 count = 0
+phase1. Via VIA12_1cut_BW37_UW20 count = 4368880
+phase1. Via VIA23_1cut_BW20_UW24 count = 2205077
+phase1. Via VIA34_1cut_BW24_UW38_ISO count = 825632
+phase1. Via VIA45_1cut_BW38_UW38_ISO count = 489499
+phase1. Via VIA56_1cut_BW38_UW38_ISO count = 309192
+phase1. Via VIA67_1cut_BW38_UW38_ISO count = 189848
+phase1. Via VIA78_1cut_BW38_UW38_ISO count = 117765
+phase1. Via VIA89_1cut_BW38_UW38_ISO count = 85137
+phase1. Via VIA910_1cut count = 41142
+phase1. Via VIA1011_1cut count = 42566
+phase1. Via VIA1112_1cut count = 7861
+phase1. Via VIA1213_1cut count = 7036
+phase1. Via VIA1314_1cut count = 0
+phase1. Via VIA1415_1cut count = 0
+phase1. Via VIA15AP count = 0
+phase1. Number of intra gCell short connections modeled 134794
+phase1. Number of inter gCell short connections modeled 11998
+phase1. Number of blockage aware short connections modeled 10409
+phase1. completed.
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:04
+[updNetsDmd] Elapsed cpu time: sys=0:00:14 usr=0:00:45 total=0:01:00
+
+Start GR phase 2
+Wed Aug 30 21:54:34 2023
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+10% of nets complete Elapsed cpu time: 0:05:09 Elapsed real time: 0:00:40
+20% of nets complete Elapsed cpu time: 0:07:37 Elapsed real time: 0:01:07
+30% of nets complete Elapsed cpu time: 0:07:44 Elapsed real time: 0:01:07
+40% of nets complete Elapsed cpu time: 0:07:54 Elapsed real time: 0:01:08
+50% of nets complete Elapsed cpu time: 0:08:02 Elapsed real time: 0:01:09
+60% of nets complete Elapsed cpu time: 0:08:08 Elapsed real time: 0:01:09
+70% of nets complete Elapsed cpu time: 0:08:19 Elapsed real time: 0:01:10
+80% of nets complete Elapsed cpu time: 0:08:34 Elapsed real time: 0:01:11
+90% of nets complete Elapsed cpu time: 0:08:46 Elapsed real time: 0:01:11
+[rtAllParts] Elapsed real time: 0:01:20
+[rtAllParts] Elapsed cpu time: sys=0:01:18 usr=0:08:06 total=0:09:24
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:05
+[updNetsDmd] Elapsed cpu time: sys=0:00:28 usr=0:00:46 total=0:01:15
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:01:25
+[End of Phase2 Routing] Elapsed cpu time: sys=0:01:46 usr=0:08:53 total=0:10:39
+[End of Phase2 Routing] Stage (MB): Used 60 Alloctr 62 Proc 62
+[End of Phase2 Routing] Total (MB): Used 5429 Alloctr 5502 Proc 66714
+phase2. Routing result:
+phase2. Both Dirs: Dmd-Cap = 2 Max = 1 GRCs = 5 (0.00%)
+phase2. H routing: Dmd-Cap = 0 Max = 1 (GRCs = 2) GRCs = 2 (0.00%)
+phase2. V routing: Dmd-Cap = 2 Max = 1 (GRCs = 3) GRCs = 3 (0.00%)
+phase2. Both Dirs: Overflow = 18625 Max = 5 GRCs = 18224 (0.81%)
+phase2. H routing: Overflow = 1740 Max = 3 (GRCs = 16) GRCs = 2482 (0.22%)
+phase2. V routing: Overflow = 16885 Max = 5 (GRCs = 1) GRCs = 15742 (1.40%)
+phase2. M0       Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase2. M1       Overflow = 11157 Max = 4 (GRCs = 9) GRCs = 11043 (0.98%)
+phase2. M2       Overflow = 864 Max = 3 (GRCs = 10) GRCs = 1987 (0.18%)
+phase2. M3       Overflow = 1 Max = 1 (GRCs = 2) GRCs = 2 (0.00%)
+phase2. M4       Overflow = 27 Max = 1 (GRCs = 27) GRCs = 27 (0.00%)
+phase2. M5       Overflow = 1004 Max = 5 (GRCs = 1) GRCs = 821 (0.07%)
+phase2. M6       Overflow = 37 Max = 2 (GRCs = 1) GRCs = 37 (0.00%)
+phase2. M7       Overflow = 38 Max = 2 (GRCs = 4) GRCs = 34 (0.00%)
+phase2. M8       Overflow = 6 Max = 1 (GRCs = 6) GRCs = 6 (0.00%)
+phase2. M9       Overflow = 819 Max = 3 (GRCs = 32) GRCs = 709 (0.06%)
+phase2. M10      Overflow = 38 Max = 3 (GRCs = 6) GRCs = 22 (0.00%)
+phase2. M11      Overflow = 3158 Max = 3 (GRCs = 36) GRCs = 2432 (0.22%)
+phase2. M12      Overflow = 767 Max = 2 (GRCs = 364) GRCs = 403 (0.04%)
+phase2. M13      Overflow = 707 Max = 2 (GRCs = 6) GRCs = 701 (0.06%)
+phase2. M14      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase2. M15      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase2. AP      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+
+
+Density distribution:
+Layer 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 > 1.2
+M0     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M1     9.13 2.71 2.94 6.47 0.98 13.9 11.6 5.41 3.82 0.00 42.1 0.04 0.15 0.59
+M2     8.66 9.07 11.7 14.4 13.7 20.4 9.48 7.92 3.68 0.68 0.17 0.00 0.00 0.00
+M3     6.31 7.68 9.11 17.4 14.4 17.4 14.4 9.25 3.39 0.47 0.04 0.00 0.00 0.00
+M4     4.62 8.63 2.75 14.6 4.17 21.2 19.3 3.78 14.8 0.00 5.98 0.00 0.00 0.00
+M5     3.72 6.87 2.87 10.0 2.80 16.4 18.0 6.70 21.6 0.00 10.8 0.03 0.03 0.01
+M6     11.5 19.3 4.31 19.9 4.69 18.5 11.7 1.89 6.18 0.00 1.72 0.00 0.00 0.00
+M7     3.84 8.49 4.40 11.3 3.30 16.3 14.7 7.24 21.0 0.00 9.20 0.00 0.00 0.00
+M8     22.5 26.4 7.84 19.7 3.18 9.45 6.27 1.63 1.68 0.00 1.29 0.00 0.00 0.00
+M9     37.0 5.56 3.15 10.2 1.86 13.5 11.2 4.38 9.13 0.00 3.86 0.00 0.00 0.06
+M10     51.3 0.00 18.3 7.80 0.00 14.0 2.51 3.98 0.00 0.00 1.98 0.00 0.00 0.00
+M11     30.3 0.05 9.56 5.88 0.00 16.6 5.98 14.1 0.00 0.00 17.1 0.00 0.05 0.16
+M12     80.9 0.00 0.00 0.00 0.00 16.7 0.00 0.00 0.00 0.00 2.28 0.00 0.00 0.04
+M13     80.1 0.00 0.00 0.02 0.00 13.7 0.00 0.00 0.00 0.00 6.04 0.00 0.00 0.06
+M14     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M15     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+AP     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+Total 44.1 5.58 4.53 8.11 2.89 12.2 7.38 3.90 5.03 0.07 6.04 0.00 0.01 0.05
+
+
+phase2. Total Wire Length = 13127459.44
+phase2. Layer M0 wire length = 0.00
+phase2. Layer M1 wire length = 557636.47
+phase2. Layer M2 wire length = 1798279.59
+phase2. Layer M3 wire length = 2050295.35
+phase2. Layer M4 wire length = 1312563.00
+phase2. Layer M5 wire length = 1581456.98
+phase2. Layer M6 wire length = 1006375.07
+phase2. Layer M7 wire length = 1723702.18
+phase2. Layer M8 wire length = 733418.68
+phase2. Layer M9 wire length = 944040.07
+phase2. Layer M10 wire length = 377496.17
+phase2. Layer M11 wire length = 805364.93
+phase2. Layer M12 wire length = 107018.80
+phase2. Layer M13 wire length = 129812.14
+phase2. Layer M14 wire length = 0.00
+phase2. Layer M15 wire length = 0.00
+phase2. Layer AP wire length = 0.00
+phase2. Total Number of Contacts = 8704989
+phase2. Via VIA01 count = 0
+phase2. Via VIA12_1cut_BW37_UW20 count = 4370940
+phase2. Via VIA23_1cut_BW20_UW24 count = 2211706
+phase2. Via VIA34_1cut_BW24_UW38_ISO count = 825469
+phase2. Via VIA45_1cut_BW38_UW38_ISO count = 490285
+phase2. Via VIA56_1cut_BW38_UW38_ISO count = 310783
+phase2. Via VIA67_1cut_BW38_UW38_ISO count = 190727
+phase2. Via VIA78_1cut_BW38_UW38_ISO count = 118595
+phase2. Via VIA89_1cut_BW38_UW38_ISO count = 86084
+phase2. Via VIA910_1cut count = 41466
+phase2. Via VIA1011_1cut count = 43618
+phase2. Via VIA1112_1cut count = 7903
+phase2. Via VIA1213_1cut count = 7413
+phase2. Via VIA1314_1cut count = 0
+phase2. Via VIA1415_1cut count = 0
+phase2. Via VIA15AP count = 0
+phase2. Number of intra gCell short connections modeled 27830
+phase2. Number of inter gCell short connections modeled 2686
+phase2. Number of blockage aware short connections modeled 1545
+phase2. completed.
+
+Start GR phase 3
+Wed Aug 30 21:55:55 2023
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[rtAllParts] Elapsed real time: 0:00:50
+[rtAllParts] Elapsed cpu time: sys=0:00:55 usr=0:04:25 total=0:05:20
+Number of partitions: 70 (5 x 14)
+Size of partitions: 128 gCells x 128 gCells
+[updNetsDmd] Elapsed real time: 0:00:06
+[updNetsDmd] Elapsed cpu time: sys=0:00:31 usr=0:00:46 total=0:01:17
+Current Stage stats:
+[End of Phase3 Routing] Elapsed real time: 0:00:56
+[End of Phase3 Routing] Elapsed cpu time: sys=0:01:26 usr=0:05:11 total=0:06:38
+[End of Phase3 Routing] Stage (MB): Used 2 Alloctr 1 Proc 0
+[End of Phase3 Routing] Total (MB): Used 5431 Alloctr 5503 Proc 66714
+phase3. Routing result:
+phase3. Both Dirs: Dmd-Cap = 2 Max = 1 GRCs = 4 (0.00%)
+phase3. H routing: Dmd-Cap = 0 Max = 1 (GRCs = 1) GRCs = 1 (0.00%)
+phase3. V routing: Dmd-Cap = 2 Max = 1 (GRCs = 3) GRCs = 3 (0.00%)
+phase3. Both Dirs: Overflow = 12793 Max = 5 GRCs = 12556 (0.56%)
+phase3. H routing: Overflow = 627 Max = 3 (GRCs = 9) GRCs = 1075 (0.10%)
+phase3. V routing: Overflow = 12166 Max = 5 (GRCs = 1) GRCs = 11481 (1.02%)
+phase3. M0       Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase3. M1       Overflow = 9383 Max = 4 (GRCs = 7) GRCs = 9163 (0.81%)
+phase3. M2       Overflow = 354 Max = 3 (GRCs = 4) GRCs = 885 (0.08%)
+phase3. M3       Overflow = 4 Max = 1 (GRCs = 9) GRCs = 9 (0.00%)
+phase3. M4       Overflow = 9 Max = 1 (GRCs = 10) GRCs = 10 (0.00%)
+phase3. M5       Overflow = 890 Max = 5 (GRCs = 1) GRCs = 716 (0.06%)
+phase3. M6       Overflow = 36 Max = 2 (GRCs = 1) GRCs = 36 (0.00%)
+phase3. M7       Overflow = 256 Max = 3 (GRCs = 37) GRCs = 160 (0.01%)
+phase3. M8       Overflow = 30 Max = 2 (GRCs = 6) GRCs = 24 (0.00%)
+phase3. M9       Overflow = 478 Max = 3 (GRCs = 27) GRCs = 339 (0.03%)
+phase3. M10      Overflow = 40 Max = 3 (GRCs = 5) GRCs = 26 (0.00%)
+phase3. M11      Overflow = 716 Max = 3 (GRCs = 34) GRCs = 657 (0.06%)
+phase3. M12      Overflow = 157 Max = 2 (GRCs = 63) GRCs = 94 (0.01%)
+phase3. M13      Overflow = 437 Max = 1 (GRCs = 437) GRCs = 437 (0.04%)
+phase3. M14      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase3. M15      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+phase3. AP      Overflow = 0 Max = 0 (GRCs = 0) GRCs = 0 (0.00%)
+
+
+Density distribution:
+Layer 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 > 1.2
+M0     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M1     9.18 2.71 2.93 6.47 0.98 14.0 11.6 5.41 3.82 0.00 42.1 0.03 0.13 0.52
+M2     8.66 9.06 11.7 14.4 13.7 20.4 9.49 7.89 3.70 0.79 0.08 0.00 0.00 0.00
+M3     6.30 7.67 9.08 17.3 14.4 17.4 14.4 9.26 3.43 0.50 0.05 0.00 0.00 0.00
+M4     4.62 8.63 2.75 14.6 4.17 21.2 19.3 3.78 14.8 0.00 6.00 0.00 0.00 0.00
+M5     3.72 6.87 2.87 10.0 2.80 16.4 18.0 6.68 21.6 0.00 10.8 0.02 0.03 0.01
+M6     11.5 19.3 4.32 19.9 4.69 18.5 11.8 1.89 6.18 0.00 1.73 0.00 0.00 0.00
+M7     3.84 8.48 4.40 11.3 3.29 16.3 14.7 7.24 21.0 0.00 9.22 0.01 0.00 0.00
+M8     22.5 26.4 7.84 19.7 3.18 9.46 6.28 1.64 1.68 0.00 1.30 0.00 0.00 0.00
+M9     37.0 5.56 3.14 10.2 1.85 13.4 11.2 4.38 9.16 0.00 3.89 0.01 0.00 0.02
+M10     51.3 0.00 18.3 7.80 0.00 14.0 2.53 3.98 0.00 0.00 1.98 0.00 0.00 0.00
+M11     30.4 0.05 9.56 5.87 0.00 16.7 5.99 14.1 0.00 0.00 17.1 0.00 0.04 0.02
+M12     80.9 0.00 0.00 0.00 0.00 16.7 0.00 0.00 0.00 0.00 2.26 0.00 0.00 0.01
+M13     80.1 0.00 0.00 0.02 0.00 13.9 0.00 0.00 0.00 0.00 5.86 0.00 0.00 0.04
+M14     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+M15     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+AP     100. 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+Total 44.1 5.58 4.53 8.11 2.89 12.2 7.38 3.90 5.03 0.08 6.03 0.00 0.01 0.04
+
+
+phase3. Total Wire Length = 13127835.78
+phase3. Layer M0 wire length = 0.00
+phase3. Layer M1 wire length = 556642.81
+phase3. Layer M2 wire length = 1797620.06
+phase3. Layer M3 wire length = 2052576.03
+phase3. Layer M4 wire length = 1312920.45
+phase3. Layer M5 wire length = 1581307.99
+phase3. Layer M6 wire length = 1006758.19
+phase3. Layer M7 wire length = 1724080.05
+phase3. Layer M8 wire length = 733784.15
+phase3. Layer M9 wire length = 944191.76
+phase3. Layer M10 wire length = 377658.78
+phase3. Layer M11 wire length = 804949.55
+phase3. Layer M12 wire length = 106722.86
+phase3. Layer M13 wire length = 128623.09
+phase3. Layer M14 wire length = 0.00
+phase3. Layer M15 wire length = 0.00
+phase3. Layer AP wire length = 0.00
+phase3. Total Number of Contacts = 8709746
+phase3. Via VIA01 count = 0
+phase3. Via VIA12_1cut_BW37_UW20 count = 4370330
+phase3. Via VIA23_1cut_BW20_UW24 count = 2215498
+phase3. Via VIA34_1cut_BW24_UW38_ISO count = 826061
+phase3. Via VIA45_1cut_BW38_UW38_ISO count = 490380
+phase3. Via VIA56_1cut_BW38_UW38_ISO count = 311059
+phase3. Via VIA67_1cut_BW38_UW38_ISO count = 190837
+phase3. Via VIA78_1cut_BW38_UW38_ISO count = 118678
+phase3. Via VIA89_1cut_BW38_UW38_ISO count = 86220
+phase3. Via VIA910_1cut count = 41474
+phase3. Via VIA1011_1cut count = 43852
+phase3. Via VIA1112_1cut count = 7871
+phase3. Via VIA1213_1cut count = 7486
+phase3. Via VIA1314_1cut count = 0
+phase3. Via VIA1415_1cut count = 0
+phase3. Via VIA15AP count = 0
+phase3. Number of intra gCell short connections modeled 6016
+phase3. Number of inter gCell short connections modeled 38
+phase3. Number of blockage aware short connections modeled 147
+phase3. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:13:47
+[End of Whole Chip Routing] Elapsed cpu time: sys=0:05:24 usr=1:11:37 total=1:17:01
+[End of Whole Chip Routing] Stage (MB): Used 2579 Alloctr 2623 Proc 1187
+[End of Whole Chip Routing] Total (MB): Used 5431 Alloctr 5503 Proc 66714
+
+Congestion utilization per direction:
+Average vertical track utilization = 53.79 %
+Peak vertical track utilization = 103.85 %
+Average horizontal track utilization = 38.18 %
+Peak horizontal track utilization = 103.57 %
+
+[End of Global Routing] Elapsed real time: 0:13:49
+[End of Global Routing] Elapsed cpu time: sys=0:05:27 usr=1:11:46 total=1:17:13
+[End of Global Routing] Stage (MB): Used 2089 Alloctr 2194 Proc 1187
+[End of Global Routing] Total (MB): Used 4942 Alloctr 5074 Proc 66714
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[DBOUT] Elapsed real time: 0:00:07
+[DBOUT] Elapsed cpu time: sys=0:00:03 usr=0:00:08 total=0:00:11
+[DBOUT] Stage (MB): Used -3832 Alloctr -3964 Proc 0
+[DBOUT] Total (MB): Used 36 Alloctr 38 Proc 66714
+[End of dbOut] Elapsed real time: 0:00:07
+[End of dbOut] Elapsed cpu time: sys=0:00:03 usr=0:00:08 total=0:00:11
+[End of dbOut] Stage (MB): Used -3832 Alloctr -3964 Proc 0
+[End of dbOut] Total (MB): Used 36 Alloctr 38 Proc 66714
+****************************************
+Report : congestion
+Design : zcms_sixers_4lane_dbe_lane
+Version: T-2022.03-SP4-VAL
+Date : Wed Aug 30 21:57:00 2023
+****************************************
+
+Layer | overflow |                        # GRCs has
+Name           | total | max | overflow (%)          | max overflow
+---------------------------------------------------------------
+M0         |       0| 0|       0 ( 0.0000%) |          0
+M1         | 10242 | 4 | 9163 ( 0.8133%) |                  7
+M2         | 952 | 3 | 885 ( 0.0785%) |                   4
+M3         |       9| 1|       9 ( 0.0008%) |          9
+M4         |      10 | 1 |     10 ( 0.0009%) |          10
+M5         | 898 | 5 | 716 ( 0.0635%) |                   1
+M6         |      37 | 2 |     36 ( 0.0032%) |           1
+M7         | 259 | 3 | 160 ( 0.0142%) |                  37
+M8         |      30 | 2 |     24 ( 0.0021%) |           6
+M9         | 483 | 3 | 339 ( 0.0301%) |                  27
+M10          |     40 | 3 |     26 ( 0.0023%) |           5
+M11          | 741 | 3 | 657 ( 0.0583%) |                 34
+M12          | 157 | 2 |         94 ( 0.0083%) |         63
+M13          | 437 | 1 | 437 ( 0.0388%) | 437
+M14          |      0| 0|       0 ( 0.0000%) |          0
+M15          |      0| 0|       0 ( 0.0000%) |          0
+AP        |        0| 0|      0 ( 0.0000%) |          0
+---------------------------------------------------------------
+Both Dirs | 14295 | 5 | 12556 ( 0.5572%) |                     1
+H routing | 1226 | 3 | 1075 ( 0.0954%) |                     9
+V routing | 13069 | 5 | 11481 ( 1.0190%) |                    1
+
+1
+

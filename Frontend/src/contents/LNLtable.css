@@ -32,75 +32,23 @@
 
   }
 
-  /* Timing */
-  .typ_0p85v_85c_typ_max_IO{
-    background-color: rgb(201, 151, 249);
+  .red-bg {
+    background-color: red;
   }
-  .typ_0p85v_85c_typ_max_R2R{
-    background-color: rgba(249, 163, 210, 0.977);
+  
+  .green-bg {
+    background-color: green;
   }
-
-  /* Route */
-  .Routing{
-    background-color: rgb(249, 249, 155);
-  }
-  .Congestion{
-    background-color: rgb(221, 244, 119);
+  
+  .blue-bg {
+    background-color: blue;
   }
 
-  /* Design */
 
-.Area{
-  background-color: rgb(148, 241, 136);
-}
-.Cell_Counts{
-  background-color: rgb(113, 249, 169);
-}
-.Cell_Area{
-  background-color: rgba(96, 255, 118, 0.981);
-}
-.Cell_Flops{
-  background-color: rgba(121, 240, 210, 0.834);
-}
-.num_dcudp_datapathfubs{
-  background-color: rgb(145, 193, 234);
-}
-.Ports{
-  background-color: rgb(137, 240, 185);
-}
-
-/* Power */
-.Total_Z{
-  background-color:  rgba(119, 165, 239, 0.997);
-}
-.Norm_ZAvg_ZAvgNorm_Z{
-  background-color: rgba(119, 165, 239, 0.997);
-}
-
-.svt{
-  background-color: rgb(196, 193, 248);
-}
-.ivt{
-  background-color: rgb(169, 150, 253);
-}
-.ivt_ll{
-  background-color: rgba(156, 156, 188, 0.981);
-}
-.Clk{
-  background-color: rgb(131, 230, 202);
-}
-.Constant_Switching_Activity{
-  background-color: rgb(152, 212, 212);
-}
-/* Compute */
-.TPT{
-  background-color: rgba(239, 170, 143, 0.858);
-}
-.Mem{
-  background-color: rgb(234, 171, 185);
-}
-
-
+  .highlighted {
+    background-color: yellow;
+  }
+  
 
 
   
@@ -213,20 +161,14 @@
 }
 
 /* Styles for the header-right container */
-.header-right {
-  display: flex;
-  justify-content: space-between; /* To place items at each end of the container */
-  align-items: center; /* Vertically center the filter input and icon */
 
- 
-}
 
 
 .header-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Add padding for spacing */
+  /* padding: 10px; */
  
 }
 
@@ -244,9 +186,21 @@
 /* Add styles to your h3 header tag */
 h3 {
   font-family: Arial, sans-serif; /* Choose a suitable font-family */
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 20px; /* Adjust the font size as needed */
   color: #000000; /* Choose a suitable text color */
   margin-bottom: 20px; /* Add spacing below the header */
   text-transform: uppercase; /* Optionally, make text uppercase */
   padding-left: 10px;
+}
+  
+/* .mainContainer{
+  background-color: yellow;
+} */
+
+.mainWrapper{
+  display: grid;
+  grid-template-rows: auto 1fr; /* Header takes auto height, table takes remaining space */
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

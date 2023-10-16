@@ -1,0 +1,95 @@
+[
+    {
+      "Partition": "sag_xetlb",
+      "Dst": "020_prects_opt",
+  
+      "Timing": {
+        "typ_0p85v_85c_typ_max:IO": {
+          "WNS": {
+            "value": "-0.0153",
+            "LineNum": "13",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          },
+          "TNS": {
+            "value": "-1.1837",
+            "LineNum": "14",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          },
+          "Viols": {
+            "value": "-1.1837",
+            "LineNum": "15",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          }
+        },
+        "typ_0p85v_85c_typ_max:R2R": {
+          "WNS": {
+            "value": "-0.021",
+            "LineNum": "21",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          },
+          "TNS": {
+            "value": "-0.09",
+            "LineNum": "22",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          },
+          "Viols": {
+            "value": "34",
+            "LineNum": "23",
+            "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+          }
+        }
+      },
+      "Route": {
+          "Routing": {
+            "Net Length": {
+              "value": "13934262",
+              "LineNum": "5775",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            },
+            "Net Count": {
+              "value": "1165990",
+              "LineNum": "5780",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            },
+            "Short": {
+              "value": "",
+              "LineNum": "",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            },
+            "NullShort": {
+              "value": "",
+              "LineNum": "",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            },
+            "Real Short": {
+              "value": "",
+              "LineNum": "",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            },
+            "Total DRCs": {
+              "value": "",
+              "LineNum": "",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt"
+            }
+          },
+          "Congestion": {
+            "Both %": {
+              "value": "0.5572%",
+              "LineNum": "918",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_repor_congestion.txt"
+            },
+            "Horz %": {
+              "value": "0.0954%",
+              "LineNum": "919",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_repor_congestion.txt"
+            },
+            "Vert %": {
+              "value": "1.0190%",
+              "LineNum": "920",
+              "path": "C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_repor_congestion.txt"
+            }
+          }
+        }
+  
+    }
+]

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
@@ -6,13 +6,13 @@ import "ag-grid-enterprise";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./LNLtable.css";
 import jsonData from "./DetailLNLData.json"; // Import the static JSON data
+// import jsonData from "../Displayfiles/Detail.json"; // Import the static JSON data
 import "./Popup.css";
-import Button from "@mui/material/Button";
-import { createTheme } from '@mui/material/styles';
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-
-
+import { animateScroll as scroll } from 'react-scroll';
+import ScrollableFeed from 'react-scrollable-feed';
+import axios from "axios";
 
 const LNLtable = () => {
   const [gridApi, setGridApi] = useState(null);
@@ -22,29 +22,18 @@ const LNLtable = () => {
   const [selectedCell, setSelectedCell] = useState(null);
   const [selectedData, setSelectedData] = useState(null);
   const [selectedField, setSelectedField] = useState(null);
-  const [popupVisible, setPopupVisible] = useState(false);
   const [filterValue, setFilterValue] = useState(""); // State for filter input value
   const [filteredCount, setFilteredCount] = useState(0); // State for filtered count
   const [filteredRows, setFilteredRows] = useState([]);
   const [buttonsVisible, setButtonsVisible] = useState(false); // State to track button visibility
+  const [pageSize, setPageSize] = useState(15); // Default page size
+
+  const scrollableRef = useRef();
+  
+
 
   const toggleButtons = () => {
     setButtonsVisible(!buttonsVisible); // Toggle button visibility
-  };
-
-  const openPopup = () => {
-    setPopupVisible(true);
-  };
-
-  const closePopup = () => {
-    setPopupVisible(false);
-    setSelectedCell(null);
-    setSelectedData(null);
-    setSelectedField(null);
-  };
-
-  const toggleTable = () => {
-    setTableMaximized(!tableMaximized);
   };
 
   useEffect(() => {
@@ -72,48 +61,74 @@ const LNLtable = () => {
     setData(filteredData);
   };
 
-  const gridOptions = {
-    pagination: true, // Enable pagination
-    paginationPageSize: 15, // Number of rows per page
-    // domLayout: 'paginationPrevPage,paginationPage,paginationNextPage,paginationPageSize',
-    domLayout:
-      "paginationTop,paginationPrevPage,paginationPage,paginationNextPage,paginationPageSize,paginationBottom", // Customize the DOM layout
-    suppressScrollOnNewData: true,
-    onCellClicked: (params) => {
-      const cellValue = params.value;
-      setSelectedCell(cellValue);
 
-      // Find the corresponding row data based on the selected cell value and dynamic field
-      const fieldNameToSearch = params.colDef.field;
-      const rowData = jsonData.find(
-        (row) => row[fieldNameToSearch] === cellValue
-      );
-      setSelectedData(rowData);
-      setSelectedField(fieldNameToSearch);
-      openPopup();
-    },
-
-    getRowStyle: (params) => {
-      if (filteredRows.some((row) => row === params.node.data)) {
-        return { background: "blue" }; // Add your highlight style here
-      }
-      return null;
-    },
+  
+  const openFileAndHighlight = (cellPath, cellValue) => {
+    fetch('http://localhost:4001/api/openFile', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ path: cellPath, searchValue: cellValue }),
+    })
+      .then(response => response.text())
+      .then(fileContent => {
+        const newTab = window.open('', '_blank');
+        newTab.document.write('');
+  
+        const highlightedContent = fileContent.replace(
+          new RegExp(cellValue, 'g'),
+          `<span style="background-color: yellow">${cellValue}</span>`
+        );
+  
+        newTab.document.write(`
+          <html>
+            <head>
+              <style>
+                /* Add some custom styling if needed */
+              </style>
+            </head>
+            <body>
+              <pre>${highlightedContent}</pre>
+            </body>
+          </html>
+        `);
+  
+        newTab.document.close();
+  
+        // After the content is loaded, scroll to the last highlighted occurrence
+        newTab.onload = () => {
+          const highlightedElements = newTab.document.querySelectorAll('span[style*="background-color: yellow"]');
+          if (highlightedElements.length > 0) {
+            const lastHighlightedElement = highlightedElements[highlightedElements.length - 1];
+            lastHighlightedElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+          }
+        };
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Error fetching file content');
+      });
+  };
+  
+ 
+  
+  const onCellClicked = (params) => {
+    const cellPath = params.data.path;
+    const cellValue = params.value;
+    openFileAndHighlight(cellPath, cellValue);
   };
 
-   const timingDataColumnDefs = [
+
+  const timingDataColumnDefs = [
     // Define column definitions for timingData category here
-    {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
+    
     {
       headerName: "Partition",
       field: "Partition",
       width: 125,
+      filter: "agMultiColumnFilter",
+      sortable: true,
       pinned: "left",
       filter: "agTextColumnFilter",
       rowStyle: { border: "1px solid black" },
@@ -122,6 +137,8 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 220,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -139,6 +156,7 @@ const LNLtable = () => {
               headerName: "WNS",
               field: "WNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -148,6 +166,7 @@ const LNLtable = () => {
               headerName: "TNS",
               field: "TNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -157,6 +176,7 @@ const LNLtable = () => {
               headerName: "Viols",
               field: "Viols",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -171,6 +191,7 @@ const LNLtable = () => {
               headerName: "WNS",
               field: "WNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -180,6 +201,7 @@ const LNLtable = () => {
               headerName: "TNS",
               field: "TNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -189,6 +211,7 @@ const LNLtable = () => {
               headerName: "Viols",
               field: "Viols",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -201,16 +224,12 @@ const LNLtable = () => {
   ];
   const routingDataColumnDefs = [
     // Define column definitions for routingData category here
-    {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
+    
     {
       headerName: "Partition",
       field: "Partition",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 125,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -220,13 +239,14 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 220,
       pinned: "left",
       filter: "agTextColumnFilter",
       rowStyle: { border: "1px solid black" },
       cellStyle: { border: "1px solid black" },
     },
-
     {
       headerName: "ROUTE",
       children: [
@@ -237,6 +257,7 @@ const LNLtable = () => {
               headerName: "Net Length",
               field: "Net Length",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -246,6 +267,7 @@ const LNLtable = () => {
               headerName: "Net Count",
               field: "Net Count",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -255,6 +277,7 @@ const LNLtable = () => {
               headerName: "Short",
               field: "Short",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -264,6 +287,7 @@ const LNLtable = () => {
               headerName: "NullShort",
               field: "NullShort",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -273,6 +297,7 @@ const LNLtable = () => {
               headerName: "Real Short",
               field: "Real Short",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -282,6 +307,7 @@ const LNLtable = () => {
               headerName: "Total DRCs",
               field: "Total DRCs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 135,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -296,6 +322,8 @@ const LNLtable = () => {
               headerName: "Both %",
               field: "Both %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -305,6 +333,8 @@ const LNLtable = () => {
               headerName: "Horz %",
               field: "Horz %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -314,6 +344,8 @@ const LNLtable = () => {
               headerName: "Vert %",
               field: "Vert %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -325,16 +357,12 @@ const LNLtable = () => {
     },
   ];
   const designDataColumnDefs = [
-    {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
+   
     {
       headerName: "Partition",
       field: "Partition",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 125,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -344,6 +372,8 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 220,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -361,6 +391,7 @@ const LNLtable = () => {
               headerName: "Cell Area",
               field: "Cell Area",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -370,6 +401,7 @@ const LNLtable = () => {
               headerName: "Die Area Utilization %",
               field: "Die Area Utilization %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -380,6 +412,7 @@ const LNLtable = () => {
               headerName: "Design Utilization %",
               field: "Design Utilization %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -389,6 +422,7 @@ const LNLtable = () => {
               headerName: "Gatecount",
               field: "Gatecount",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -403,6 +437,7 @@ const LNLtable = () => {
               headerName: "All",
               field: "All",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -412,6 +447,7 @@ const LNLtable = () => {
               headerName: "Stdcell",
               field: "Stdcell",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -421,6 +457,7 @@ const LNLtable = () => {
               headerName: "Seq",
               field: "Seq",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -430,6 +467,7 @@ const LNLtable = () => {
               headerName: "Buf/Inv",
               field: "Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -439,6 +477,7 @@ const LNLtable = () => {
               headerName: "Hold Buf/Inv",
               field: "Hold Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -448,6 +487,7 @@ const LNLtable = () => {
               headerName: "Unclocked Seqs",
               field: "Unclocked Seqs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 175,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -462,6 +502,7 @@ const LNLtable = () => {
               headerName: "All",
               field: "All",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -471,6 +512,7 @@ const LNLtable = () => {
               headerName: "Stdcell",
               field: "Stdcell",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -480,6 +522,7 @@ const LNLtable = () => {
               headerName: "Stdcell Growth %",
               field: "Stdcell Growth %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 185,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -489,6 +532,7 @@ const LNLtable = () => {
               headerName: "Seq",
               field: "Seq",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -498,6 +542,7 @@ const LNLtable = () => {
               headerName: "Buf/Inv",
               field: "Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -507,6 +552,7 @@ const LNLtable = () => {
               headerName: "Hold Buf/Inv",
               field: "Hold Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -516,6 +562,7 @@ const LNLtable = () => {
               headerName: "Clk Buf/Inv",
               field: "Clk Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -525,6 +572,7 @@ const LNLtable = () => {
               headerName: "Clk Gates",
               field: "Clk Gates",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -534,6 +582,7 @@ const LNLtable = () => {
               headerName: "Combinational",
               field: "Combinational",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -543,6 +592,7 @@ const LNLtable = () => {
               headerName: "pfet",
               field: "pfet",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -552,6 +602,7 @@ const LNLtable = () => {
               headerName: "Macro",
               field: "Macro",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -566,6 +617,7 @@ const LNLtable = () => {
               headerName: "Mbit flop %",
               field: "Mbit flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -575,6 +627,7 @@ const LNLtable = () => {
               headerName: "Octa flop %",
               field: "Octa flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -584,6 +637,7 @@ const LNLtable = () => {
               headerName: "Non-RP Octa flop %",
               field: "Non-RP Octa flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 200,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -598,6 +652,7 @@ const LNLtable = () => {
               headerName: "Datapath fubs count",
               field: "Datapath fubs count",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "num_dcudp_datapathfubs",
               rowStyle: { border: "1px solid black" },
@@ -612,6 +667,7 @@ const LNLtable = () => {
               headerName: "Inputs",
               field: "Inputs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -621,6 +677,7 @@ const LNLtable = () => {
               headerName: "Outputs",
               field: "Outputs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -630,6 +687,7 @@ const LNLtable = () => {
               headerName: "Feedthrus",
               field: "Feedthrus",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -641,16 +699,12 @@ const LNLtable = () => {
     },
   ];
   const powerDataColumnDefs = [
-    {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
+    
     {
       headerName: "Partition",
       field: "Partition",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 125,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -660,6 +714,8 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
+      filter: "agMultiColumnFilter",
+      sortable: true,
       width: 220,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -677,6 +733,7 @@ const LNLtable = () => {
               headerName: "Total Z",
               field: "Total Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Total_Z",
               rowStyle: { border: "1px solid black" },
@@ -686,6 +743,7 @@ const LNLtable = () => {
               headerName: "Norm Z",
               field: "Norm Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -695,6 +753,7 @@ const LNLtable = () => {
               headerName: "Avg Z",
               field: "Avg Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -704,6 +763,7 @@ const LNLtable = () => {
               headerName: "Avg Norm Z",
               field: "Avg Norm Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 140,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -713,6 +773,7 @@ const LNLtable = () => {
               headerName: "svt",
               field: "svt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "svt",
               rowStyle: { border: "1px solid black" },
@@ -722,6 +783,7 @@ const LNLtable = () => {
               headerName: "lvtll",
               field: "lvtll",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -731,6 +793,7 @@ const LNLtable = () => {
               headerName: "lvt",
               field: "lvt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -740,6 +803,7 @@ const LNLtable = () => {
               headerName: "ulvtll",
               field: "ulvtll",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -750,6 +814,7 @@ const LNLtable = () => {
               headerName: "ulvt",
               field: "ulvt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -759,6 +824,7 @@ const LNLtable = () => {
               headerName: "ulvt %",
               field: "ulvt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -768,6 +834,7 @@ const LNLtable = () => {
               headerName: "ulvtll %",
               field: "ulvtll %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -777,6 +844,7 @@ const LNLtable = () => {
               headerName: "lvt %",
               field: "lvt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -786,6 +854,7 @@ const LNLtable = () => {
               headerName: "svt %",
               field: "svt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -795,6 +864,7 @@ const LNLtable = () => {
               headerName: "lvtll %",
               field: "lvtll %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -804,6 +874,7 @@ const LNLtable = () => {
               headerName: "Clk",
               field: "Clk",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Clk",
               rowStyle: { border: "1px solid black" },
@@ -818,6 +889,7 @@ const LNLtable = () => {
               headerName: "Internal",
               field: "Internal",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -827,6 +899,7 @@ const LNLtable = () => {
               headerName: "Switching",
               field: "Switching",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -836,6 +909,7 @@ const LNLtable = () => {
               headerName: "Leakage",
               field: "Leakage",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -845,6 +919,7 @@ const LNLtable = () => {
               headerName: "Total",
               field: "Total",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -919,16 +994,11 @@ const LNLtable = () => {
     },
   ];
   const computeDataColumnsDefs = [
-    {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
+    
     {
       headerName: "Partition",
       field: "Partition",
+      filter: "agMultiColumnFilter",
       width: 125,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -938,6 +1008,7 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
+      sortable: true,
       width: 220,
       pinned: "left",
       filter: "agTextColumnFilter",
@@ -955,6 +1026,7 @@ const LNLtable = () => {
               headerName: "Task TPT (hrs)",
               field: "Task TPT (hrs)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 160,
               cellClass: "TPT",
               rowStyle: { border: "1px solid black" },
@@ -964,6 +1036,7 @@ const LNLtable = () => {
               headerName: "Cumulative TPT (hrs)",
               field: "Cumulative TPT (hrs)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 205,
               cellClass: "TPT",
               rowStyle: { border: "1px solid black" },
@@ -978,6 +1051,7 @@ const LNLtable = () => {
               headerName: "Memory (MB)",
               field: "Memory (MB)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 160,
               cellClass: "Mem",
               rowStyle: { border: "1px solid black" },
@@ -991,13 +1065,6 @@ const LNLtable = () => {
 
   const defaultColumnDefs = [
     {
-      field: "select",
-      width: 50,
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      pinned: "left",
-    },
-    {
       headerName: "Partition",
       field: "Partition",
       pinned: "left",
@@ -1008,7 +1075,7 @@ const LNLtable = () => {
     {
       headerName: "Dst",
       field: "Dst",
-
+      filter: "agTextColumnFilter",
       pinned: "left",
       filter: "agTextColumnFilter",
       rowStyle: { border: "1px solid black" },
@@ -1018,7 +1085,6 @@ const LNLtable = () => {
     // Timing Data
     {
       headerName: "TIMING",
-      cellClass: "typ_0p85v_85c_typ_max_IO",
       children: [
         {
           headerName: "typ_0p85v_85c_typ_max:IO",
@@ -1027,6 +1093,7 @@ const LNLtable = () => {
               headerName: "WNS",
               field: "WNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -1036,6 +1103,7 @@ const LNLtable = () => {
               headerName: "TNS",
               field: "TNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -1045,6 +1113,7 @@ const LNLtable = () => {
               headerName: "Viols",
               field: "Viols",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_IO",
               rowStyle: { border: "1px solid black" },
@@ -1059,6 +1128,7 @@ const LNLtable = () => {
               headerName: "WNS",
               field: "WNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -1068,6 +1138,7 @@ const LNLtable = () => {
               headerName: "TNS",
               field: "TNS",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -1077,6 +1148,7 @@ const LNLtable = () => {
               headerName: "Viols",
               field: "Viols",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "typ_0p85v_85c_typ_max_R2R",
               rowStyle: { border: "1px solid black" },
@@ -1098,6 +1170,7 @@ const LNLtable = () => {
               headerName: "Net Length",
               field: "Net Length",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1107,6 +1180,7 @@ const LNLtable = () => {
               headerName: "Net Count",
               field: "Net Count",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1116,6 +1190,7 @@ const LNLtable = () => {
               headerName: "Short",
               field: "Short",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1125,6 +1200,7 @@ const LNLtable = () => {
               headerName: "NullShort",
               field: "NullShort",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1134,6 +1210,7 @@ const LNLtable = () => {
               headerName: "Real Short",
               field: "Real Short",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1143,6 +1220,7 @@ const LNLtable = () => {
               headerName: "Total DRCs",
               field: "Total DRCs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 135,
               cellClass: "Routing",
               rowStyle: { border: "1px solid black" },
@@ -1157,6 +1235,8 @@ const LNLtable = () => {
               headerName: "Both %",
               field: "Both %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -1166,6 +1246,8 @@ const LNLtable = () => {
               headerName: "Horz %",
               field: "Horz %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -1175,6 +1257,8 @@ const LNLtable = () => {
               headerName: "Vert %",
               field: "Vert %",
               filter: "agNumberColumnFilter",
+              sortable: true,
+              sortable: true,
               width: 125,
               cellClass: "Congestion",
               rowStyle: { border: "1px solid black" },
@@ -1196,6 +1280,7 @@ const LNLtable = () => {
               headerName: "Cell Area",
               field: "Cell Area",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -1205,6 +1290,7 @@ const LNLtable = () => {
               headerName: "Die Area Utilization %",
               field: "Die Area Utilization %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -1215,6 +1301,7 @@ const LNLtable = () => {
               headerName: "Design Utilization %",
               field: "Design Utilization %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -1224,6 +1311,7 @@ const LNLtable = () => {
               headerName: "Gatecount",
               field: "Gatecount",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Area",
               rowStyle: { border: "1px solid black" },
@@ -1238,6 +1326,7 @@ const LNLtable = () => {
               headerName: "All",
               field: "All",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1247,6 +1336,7 @@ const LNLtable = () => {
               headerName: "Stdcell",
               field: "Stdcell",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1256,6 +1346,7 @@ const LNLtable = () => {
               headerName: "Seq",
               field: "Seq",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1265,6 +1356,7 @@ const LNLtable = () => {
               headerName: "Buf/Inv",
               field: "Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1274,6 +1366,7 @@ const LNLtable = () => {
               headerName: "Hold Buf/Inv",
               field: "Hold Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1283,6 +1376,7 @@ const LNLtable = () => {
               headerName: "Unclocked Seqs",
               field: "Unclocked Seqs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 175,
               cellClass: "Cell_Counts",
               rowStyle: { border: "1px solid black" },
@@ -1297,6 +1391,7 @@ const LNLtable = () => {
               headerName: "All",
               field: "All",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1306,6 +1401,7 @@ const LNLtable = () => {
               headerName: "Stdcell",
               field: "Stdcell",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1315,6 +1411,7 @@ const LNLtable = () => {
               headerName: "Stdcell Growth %",
               field: "Stdcell Growth %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 185,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1324,6 +1421,7 @@ const LNLtable = () => {
               headerName: "Seq",
               field: "Seq",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1333,6 +1431,7 @@ const LNLtable = () => {
               headerName: "Buf/Inv",
               field: "Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1342,6 +1441,7 @@ const LNLtable = () => {
               headerName: "Hold Buf/Inv",
               field: "Hold Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1351,6 +1451,7 @@ const LNLtable = () => {
               headerName: "Clk Buf/Inv",
               field: "Clk Buf/Inv",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1360,6 +1461,7 @@ const LNLtable = () => {
               headerName: "Clk Gates",
               field: "Clk Gates",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1369,15 +1471,17 @@ const LNLtable = () => {
               headerName: "Combinational",
               field: "Combinational",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
               cellStyle: { border: "1px solid black" },
             },
             {
-              headerName: "Pfet",
+              headerName: "pfet",
               field: "pfet",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1387,6 +1491,7 @@ const LNLtable = () => {
               headerName: "Macro",
               field: "Macro",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Cell_Area",
               rowStyle: { border: "1px solid black" },
@@ -1401,6 +1506,7 @@ const LNLtable = () => {
               headerName: "Mbit flop %",
               field: "Mbit flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -1410,6 +1516,7 @@ const LNLtable = () => {
               headerName: "Octa flop %",
               field: "Octa flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 165,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -1419,6 +1526,7 @@ const LNLtable = () => {
               headerName: "Non-RP Octa flop %",
               field: "Non-RP Octa flop %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 200,
               cellClass: "Cell_Flops",
               rowStyle: { border: "1px solid black" },
@@ -1433,6 +1541,7 @@ const LNLtable = () => {
               headerName: "Datapath fubs count",
               field: "Datapath fubs count",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 230,
               cellClass: "num_dcudp_datapathfubs",
               rowStyle: { border: "1px solid black" },
@@ -1447,6 +1556,7 @@ const LNLtable = () => {
               headerName: "Inputs",
               field: "Inputs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -1456,6 +1566,7 @@ const LNLtable = () => {
               headerName: "Outputs",
               field: "Outputs",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -1465,6 +1576,7 @@ const LNLtable = () => {
               headerName: "Feedthrus",
               field: "Feedthrus",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Ports",
               rowStyle: { border: "1px solid black" },
@@ -1486,6 +1598,7 @@ const LNLtable = () => {
               headerName: "Total Z",
               field: "Total Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Total_Z",
               rowStyle: { border: "1px solid black" },
@@ -1495,6 +1608,7 @@ const LNLtable = () => {
               headerName: "Norm Z",
               field: "Norm Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -1504,6 +1618,7 @@ const LNLtable = () => {
               headerName: "Avg Z",
               field: "Avg Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -1513,6 +1628,7 @@ const LNLtable = () => {
               headerName: "Avg Norm Z",
               field: "Avg Norm Z",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 140,
               cellClass: "Norm_ZAvg_ZAvgNorm_Z",
               rowStyle: { border: "1px solid black" },
@@ -1522,6 +1638,7 @@ const LNLtable = () => {
               headerName: "svt",
               field: "svt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "svt",
               rowStyle: { border: "1px solid black" },
@@ -1531,6 +1648,7 @@ const LNLtable = () => {
               headerName: "lvtll",
               field: "lvtll",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -1540,6 +1658,7 @@ const LNLtable = () => {
               headerName: "lvt",
               field: "lvt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -1549,6 +1668,7 @@ const LNLtable = () => {
               headerName: "ulvtll",
               field: "ulvtll",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -1559,6 +1679,7 @@ const LNLtable = () => {
               headerName: "ulvt",
               field: "ulvt",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt",
               rowStyle: { border: "1px solid black" },
@@ -1568,6 +1689,7 @@ const LNLtable = () => {
               headerName: "ulvt %",
               field: "ulvt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -1577,6 +1699,7 @@ const LNLtable = () => {
               headerName: "ulvtll %",
               field: "ulvtll %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -1586,6 +1709,7 @@ const LNLtable = () => {
               headerName: "lvt %",
               field: "lvt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -1595,6 +1719,7 @@ const LNLtable = () => {
               headerName: "svt %",
               field: "svt %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -1604,6 +1729,7 @@ const LNLtable = () => {
               headerName: "lvtll %",
               field: "lvtll %",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "ivt_ll",
               rowStyle: { border: "1px solid black" },
@@ -1613,6 +1739,7 @@ const LNLtable = () => {
               headerName: "Clk",
               field: "Clk",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Clk",
               rowStyle: { border: "1px solid black" },
@@ -1627,6 +1754,7 @@ const LNLtable = () => {
               headerName: "Internal",
               field: "Internal",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -1636,6 +1764,7 @@ const LNLtable = () => {
               headerName: "Switching",
               field: "Switching",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -1645,6 +1774,7 @@ const LNLtable = () => {
               headerName: "Leakage",
               field: "Leakage",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -1654,6 +1784,7 @@ const LNLtable = () => {
               headerName: "Total",
               field: "Total",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 125,
               cellClass: "Constant_Switching_Activity",
               rowStyle: { border: "1px solid black" },
@@ -1675,6 +1806,7 @@ const LNLtable = () => {
               headerName: "Task TPT (hrs)",
               field: "Task TPT (hrs)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 160,
               cellClass: "TPT",
               rowStyle: { border: "1px solid black" },
@@ -1684,6 +1816,7 @@ const LNLtable = () => {
               headerName: "Cumulative TPT (hrs)",
               field: "Cumulative TPT (hrs)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 205,
               cellClass: "TPT",
               rowStyle: { border: "1px solid black" },
@@ -1698,6 +1831,7 @@ const LNLtable = () => {
               headerName: "Memory (MB)",
               field: "Memory (MB)",
               filter: "agNumberColumnFilter",
+              sortable: true,
               width: 160,
               cellClass: "Mem",
               rowStyle: { border: "1px solid black" },
@@ -1708,30 +1842,6 @@ const LNLtable = () => {
       ],
     },
   ];
-
-  // const data = jsonData;
-
-  // const getCategoryColumnDefs = () => {
-  //   switch (selectedCategory) {
-  //     case "default":
-  //       return defaultColumnDefs;
-  //     case "timingData":
-  //       return timingDataColumnDefs;
-  //     case "routingData":
-  //       return routingDataColumnDefs;
-  //     case "powerData":
-  //       return powerDataColumnDefs;
-  //     case "designData":
-  //       return designDataColumnDefs;
-  //     case "caliberSummaryData":
-  //       return CaliberSummaryDataColumnDefs;
-  //     case "computeData":
-  //       return computeDataColumnsDefs;
-  //     // Add cases for other categories here
-  //     default:
-  //       return defaultColumnDefs;
-  //   }
-  // };
 
   const getCategoryColumnDefs = () => {
     switch (selectedCategory) {
@@ -1750,7 +1860,7 @@ const LNLtable = () => {
       case "computeData":
         return computeDataColumnsDefs;
       // Add cases for other categories here
-      default: 
+      default:
         return [
           {
             sortable: true,
@@ -1763,8 +1873,54 @@ const LNLtable = () => {
     }
   };
 
-  // Use getCategoryColumnDefs to get column definitions
-  const categoryColumnDefs = getCategoryColumnDefs();
+  const gridOptions = {
+    onCellClicked: (params) => {
+      const cellValue = params.value;
+      setSelectedCell(cellValue);
+      // Find the corresponding row data based on the selected cell value and dynamic field
+      const fieldNameToSearch = params.colDef.field;
+      const rowData = jsonData.find(
+        (row) => row[fieldNameToSearch] === cellValue
+      );
+      setSelectedData(rowData);
+      setSelectedField(fieldNameToSearch);
+    },
+
+    getRowStyle: (params) => {
+      const partitionValue = params.data.Partition;
+
+      // Create a map to store unique colors for each unique "Partition" value
+      if (!gridOptions.colorMap) {
+        gridOptions.colorMap = {};
+      }
+
+      const colors = [
+        "rgba(255, 0, 0, 0.2)", // Very Light Red
+        "rgba(0, 255, 0, 0.2)", // Very Light Green
+        "rgba(0, 0, 255, 0.2)", // Very Light Blue
+        "rgba(255, 255, 0, 0.2)", // Very Light Yellow
+        "rgba(128, 0, 128, 0.2)", // Very Light Purple
+        "rgba(255, 165, 0, 0.2)", // Very Light Orange
+        "rgba(255, 182, 193, 0.5)", // Very Light Pink
+        "rgba(173, 216, 230, 0.5)", // Very Light Cyan
+        "rgba(255, 215, 0, 0.5)", // Very Light Gold
+        "rgba(230, 230, 250, 0.5)", // Very Light Lavender
+        "rgba(152, 251, 152, 0.5)", // Very Light Mint
+      ];
+      // If the partition value is not in the map, assign it a color
+      if (!gridOptions.colorMap[partitionValue]) {
+        // Get the next color from the array and assign it to the partition value
+        const colorIndex =
+          Object.keys(gridOptions.colorMap).length % colors.length;
+        gridOptions.colorMap[partitionValue] = colors[colorIndex];
+      }
+
+      // Apply the background color based on the assigned color
+      return { background: gridOptions.colorMap[partitionValue] };
+    },
+    pagination: true,
+    paginationPageSize: pageSize,
+  };
 
   const onCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -1773,23 +1929,34 @@ const LNLtable = () => {
   const onGridReady = (params) => {
     setGridApi(params.api);
   };
+
+  useEffect(() => {
+    if (gridApi) {
+      gridApi.paginationSetPageSize(pageSize);
+    }
+  }, [gridApi, pageSize]);
+
+ 
+
+  const handlePageSizeChange = (event) => {
+    const newSize = parseInt(event.target.value, 10);
+    if (!isNaN(newSize) && newSize > 0) {
+      setPageSize(newSize);
+    }
+  };
   const rowCount = jsonData.length; // Assuming your JSON data is an array
-  // const [rowData, setData] = useState(jsonData);
-
-
-
 
   return (
-    <div>
-      <div className="tableHeader">
+    <div className="mainWrapper" >
+      
+      <div className="mainContainer" ref={scrollableRef}>
         <h3>Detail Dashboard</h3>
-
         <div className="header-right">
           {/* Filter input on the left */}
           <div className="filter-container">
             <input
               type="text"
-              placeholder="Filter..."
+              placeholder="Search..."
               value={filterValue}
               onChange={handleFilterChange}
               className="filter-input"
@@ -1799,7 +1966,7 @@ const LNLtable = () => {
 
           {/* Blue round icon on the right */}
           <div className="blue-round-icon" onClick={toggleButtons}>
-            𝐋𝐍𝐋 𝐒𝐭𝐚𝐠𝐞𝐬
+            𝐕𝐢𝐞𝐰
           </div>
         </div>
         {/* Container for category buttons */}
@@ -1859,52 +2026,34 @@ const LNLtable = () => {
           </button>
         </div>
       </div>
-      <Button variant="contained" color="primary" onClick={toggleTable}>
-        {tableMaximized ? <FaChevronUp /> : <FaChevronDown />}
-      </Button>
-
-      <div
-        className="ag-theme-alpine"
-        style={{ height: "900px", width: "100%" }}
-      >
-        <AgGridReact
+      <div className="ag-theme-alpine">
+        <AgGridReact 
           onGridReady={onGridReady}
           gridOptions={gridOptions}
           rowData={data}
           columnDefs={getCategoryColumnDefs()}
           rowSelection="multiple"
           enableRangeSelection={true}
-          
-          // sideBar={true}
           suppressMenuHide={true}
+          onCellDoubleClicked={onCellClicked}
         ></AgGridReact>
       </div>
-      {popupVisible && (
-        <div className="popup">
-          <button className="close-button" onClick={closePopup}>
-            X
-          </button>
-          <div className="popup-content">
-            <div className="popup-top">
-              <span className={selectedCell ? "highlight" : ""}>
-                {selectedField ? `${selectedField}:` : ""}{" "}
-                {selectedData ? selectedData[selectedField] : ""}, Selected Cell
-                Value: {selectedCell}
-              </span>
-            </div>
-            {selectedData && (
-              <pre className="json-data">
-                {JSON.stringify(selectedData, null, 2)}
-              </pre>
-            )}
-          </div>
-        </div>
-      )}
+
+      <div>
+        <label htmlFor="pageSizeInput">Rows per Page:</label>
+        <input
+          id="pageSizeInput"
+          type="number"
+          min="1"
+          value={pageSize}
+          onChange={handlePageSizeChange}
+        />
+      </div>
+      
+     
       <div className="row-count">Total Rows: {rowCount}</div>
     </div>
   );
 };
 
 export default LNLtable;
-
-

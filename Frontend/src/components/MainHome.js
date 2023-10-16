@@ -8,12 +8,14 @@ import Header from "./Header";
 import BootstrapTable from "../contents/BootstrapTable";
 import { useAppContext } from "../AppContext"; // Import the AppProvider and useAppContext
 import LNLtable from "../contents/LNLtable";
-import Popup from "../contents/Popup";
 import CrossProbing from "../Displayfiles/CrossProbing";
 import FileProcessor from "../Displayfiles/FileProcessor";
 import FileVerification from "../Displayfiles/FileVerification";
 import FileViewer from "../Displayfiles/FileViewer";
 import GridExample from "../Displayfiles/GridExample";
+import NewTabContent from "../Displayfiles/NewTabContent";
+import DetailDashboard from "../Displayfiles/DetailDashboard";
+import FileViewerRenderer from "../Displayfiles/FileViewerRenderer";
 
 
 
@@ -75,12 +77,14 @@ const MainHome = () => {
           <Route path="/power" element={<Tab2Contents />} />
           <Route path="/flow" element={<Tab4Contents />} />
           <Route path="/LNLtable" element={<LNLtable />} />
-          <Route path="/popup" element={<Popup />} />
           <Route path="/crossprobing" element={<CrossProbing />} />
           <Route path="/fileprocessor" element={<FileProcessor />} />
           <Route path="/fileverify" element={<FileVerification />} />
           <Route path="/fileviewer" element={<FileViewer />} />
           <Route path="/grid" element={<GridExample />} />
+          <Route path="/newtab" element={<NewTabContent />} />
+          <Route path="/dd" element={<DetailDashboard />} />
+          <Route path="/filerender" element={<FileViewerRenderer />} />
 
 
 

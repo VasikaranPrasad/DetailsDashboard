@@ -1,11 +1,14 @@
 ﻿[
     
     {
+        
+        "Line Num":"1",
         "Partition": "sag_xetlb",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "WW22p7_finalrun_bestreceipe",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
-        "WNS": "-0.0063",
+        "WNS": "-0.0153",
         "TNS": "-0.02",
         "Viols": "10",
         "MaxTrans Viols": "29",
@@ -72,7 +75,9 @@
     },
     
     {
+        "Line Num":"2",
         "Partition": "sag_xetlb",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "WW22p7_finalrun_bestreceipe",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -142,11 +147,13 @@
         "Memory (MB)": "68488"
     },
     {
+        "Line Num":"3",
         "Partition": "scmi_xetlb",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "WW22p2_bestrun_withallinterfixes",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
-        "WNS": "-0.0026",
+        "WNS": "-0.0161",
         "TNS": "-0.01",
         "Viols": "8",
         "MaxTrans Viols": "37",
@@ -212,7 +219,9 @@
         "Memory (MB)": "75317"
     },
     {
+        "Line Num":"4",
         "Partition": "scmi_xetlb",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "WW22p2_bestrun_withallinterfixes",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -282,7 +291,9 @@
         "Memory (MB)": "75633"
     },
     {
+        "Line Num":"5",
         "Partition": "smavpar1",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "branch_tro_133_rg",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -352,7 +363,9 @@
         "Memory (MB)": "68115"
     },
     {
+        "Line Num":"6",
         "Partition": "smavpar1",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "tcon_kp0.2",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
@@ -422,7 +435,9 @@
         "Memory (MB)": "57768"
     },
     {
+        "Line Num":"7",
         "Partition": "smavpar2",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "ww19def_interfixespar1_par4",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
@@ -492,7 +507,9 @@
         "Memory (MB)": "63577"
     },
     {
+        "Line Num":"8",
         "Partition": "smavpar2",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "ww19def_interfixespar1_par4",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -562,7 +579,9 @@
         "Memory (MB)": "65102"
     },
     {
+        "Line Num":"9",
         "Partition": "smavpar3",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "boundandinter",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
@@ -632,7 +651,9 @@
         "Memory (MB)": "59237"
     },
     {
+        "Line Num":"10",
         "Partition": "smavpar3",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "boundandinter",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -702,7 +723,9 @@
         "Memory (MB)": "61246"
     },
     {
+        "Line Num":"11",
         "Partition": "smavpar3",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "boundandinter",
         "Step": "10_pre_cts",
         "Dst": "700_pv",
@@ -772,7 +795,9 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"12",
         "Partition": "smavpar3",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "boundandinter",
         "Step": "10_pre_cts",
         "Dst": "710_caliber_preroute",
@@ -842,7 +867,9 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"13",
         "Partition": "smavpar4",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "sd1p0_ww19_inter_fix",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
@@ -912,7 +939,9 @@
         "Memory (MB)": "59727"
     },
     {
+        "Line Num":"14",
         "Partition": "smavpar4",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "sd1p0_ww19_inter_fix",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
@@ -982,7 +1011,9 @@
         "Memory (MB)": "79165"
     },
     {
+        "Line Num":"15",
         "Partition": "smavpar4",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "sd1p0_ww19_inter_fix",
         "Step": "10_pre_cts",
         "Dst": "700_pv",
@@ -1052,7 +1083,9 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"16",
         "Partition": "smavpar4",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/zcms_4dbe_lane_report_qor.txt",
         "Label": "sd1p0_ww19_inter_fix",
         "Step": "10_pre_cts",
         "Dst": "710_caliber_preroute",
@@ -1122,6 +1155,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"17",
         "Partition": "smavpar5",
         "Label": "tcons",
         "Step": "10_pre_cts",
@@ -1192,6 +1226,7 @@
         "Memory (MB)": "51369"
     },
     {
+        "Line Num":"18",
         "Partition": "smavpar5",
         "Label": "tcons",
         "Step": "10_pre_cts",
@@ -1262,6 +1297,7 @@
         "Memory (MB)": "54970"
     },
     {
+        "Line Num":"19",
         "Partition": "smavpar5",
         "Label": "tcons",
         "Step": "10_pre_cts",
@@ -1332,6 +1368,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"20",
         "Partition": "smavpar5",
         "Label": "tcons",
         "Step": "10_pre_cts",
@@ -1402,6 +1439,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"21",
         "Partition": "smdecip",
         "Label": "sd1p0_ww19p4_def_Golden_57shorts_Newpathgrouptrail1_70iteration_tcon_bound_ww23p1",
         "Step": "10_pre_cts",
@@ -1472,6 +1510,7 @@
         "Memory (MB)": "52451"
     },
     {
+        "Line Num":"22",
         "Partition": "smdecip",
         "Label": "sd1p0_ww19p4_def_Golden_57shorts_Newpathgrouptrail1_70iteration_tcon_bound_ww23p1",
         "Step": "10_pre_cts",
@@ -1542,6 +1581,7 @@
         "Memory (MB)": "52580"
     },
     {
+        "Line Num":"23",
         "Partition": "smgsc",
         "Label": "sd1p0_ww14p6_ortl_ebb_blkgs_inter_fix_hfs_prt_clk_ww20p5_ww21p2",
         "Step": "10_pre_cts",
@@ -1612,6 +1652,7 @@
         "Memory (MB)": "64193"
     },
     {
+        "Line Num":"24",
         "Partition": "smgsc",
         "Label": "sd1p0_ww14p6_ortl_ebb_blkgs_inter_fix_hfs_prt_clk_ww20p5_ww21p2",
         "Step": "10_pre_cts",
@@ -1682,6 +1723,7 @@
         "Memory (MB)": "77808"
     },
     {
+        "Line Num":"25",
         "Partition": "smgsc",
         "Label": "sd1p0_ww14p6_ortl_ebb_blkgs_inter_fix_hfs_prt_clk_ww20p5_ww21p2",
         "Step": "10_pre_cts",
@@ -1752,6 +1794,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"26",
         "Partition": "smgsc",
         "Label": "sd1p0_ww14p6_ortl_ebb_blkgs_inter_fix_hfs_prt_clk_ww20p5_ww21p2",
         "Step": "10_pre_cts",
@@ -1822,6 +1865,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"26",
         "Partition": "smhcppar1",
         "Label": "KO_ww20p5",
         "Step": "10_pre_cts",
@@ -1892,6 +1936,7 @@
         "Memory (MB)": "59147"
     },
     {
+        "Line Num":"27",
         "Partition": "smhcppar1",
         "Label": "KO_ww20p5_script_TRO",
         "Step": "10_pre_cts",
@@ -1962,6 +2007,7 @@
         "Memory (MB)": "62401"
     },
     {
+        "Line Num":"28",
         "Partition": "smhcppar1",
         "Label": "KO_ww20p5_script_TRO",
         "Step": "10_pre_cts",
@@ -2032,6 +2078,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"29",
         "Partition": "smhcppar2",
         "Label": "golden_run",
         "Step": "10_pre_cts",
@@ -2102,6 +2149,7 @@
         "Memory (MB)": "58288"
     },
     {
+        "Line Num":"30",
         "Partition": "smhcppar2",
         "Label": "golden_run_short_fix",
         "Step": "10_pre_cts",
@@ -2172,6 +2220,7 @@
         "Memory (MB)": "65347"
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar2",
         "Label": "golden_run_short_fix",
         "Step": "10_pre_cts",
@@ -2242,6 +2291,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar2",
         "Label": "golden_run_short_fix",
         "Step": "10_pre_cts",
@@ -2312,6 +2362,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar3",
         "Label": "sd1p0_ww19_k0_0.4_app",
         "Step": "10_pre_cts",
@@ -2382,6 +2433,7 @@
         "Memory (MB)": "57404"
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar3",
         "Label": "sd1p0_ww19_ko_4_rd",
         "Step": "10_pre_cts",
@@ -2452,6 +2504,7 @@
         "Memory (MB)": "69113"
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar3",
         "Label": "sd1p0_ww19_ko_4_rd",
         "Step": "10_pre_cts",
@@ -2522,6 +2575,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar3",
         "Label": "sd1p0_ww19_ko_4_rd",
         "Step": "10_pre_cts",
@@ -2592,6 +2646,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar4",
         "Label": "keepoutrun",
         "Step": "10_pre_cts",
@@ -2662,6 +2717,7 @@
         "Memory (MB)": "68731"
     },
     {
+        "Line Num":"5",
         "Partition": "smhcppar4",
         "Label": "scripthigh",
         "Step": "10_pre_cts",
@@ -2732,6 +2788,7 @@
         "Memory (MB)": "75980"
     },
     {
+        "Line Num":"5",
         "Partition": "smibank0",
         "Label": "ww18p5_inter_allfixes_spv1p0_koupdtww19p1_ww20p1_congrestruct_bank02bank0_ww22p2_regbound",
         "Step": "10_pre_cts",
@@ -2802,6 +2859,7 @@
         "Memory (MB)": "67221"
     },
     {
+        "Line Num":"5",
         "Partition": "smibank0",
         "Label": "ww18p5_inter_allfixes_spv1p0_koupdtww19p1_ww20p1_congrestruct_bank02bank0_ww22p2_regbound",
         "Step": "10_pre_cts",
@@ -2872,6 +2930,7 @@
         "Memory (MB)": "70447"
     },
     {
+        "Line Num":"5",
         "Partition": "smibank0",
         "Label": "ww18p5_inter_allfixes_spv1p0_koupdtww19p1_ww20p1_congrestruct_bank02bank0_ww22p2_regbound",
         "Step": "10_pre_cts",
@@ -2942,6 +3001,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smicxlpar1",
         "Label": "ww21p5_icxl_cc_rpd_tcons_abc_ftcon",
         "Step": "10_pre_cts",
@@ -3012,6 +3072,7 @@
         "Memory (MB)": "58246"
     },
     {
+        "Line Num":"5",
         "Partition": "smicxlpar1",
         "Label": "ww21p5_icxl_cc_rpd_tcons_abc_ftcon",
         "Step": "10_pre_cts",
@@ -3082,6 +3143,7 @@
         "Memory (MB)": "61500"
     },
     {
+        "Line Num":"5",
         "Partition": "smicxlpar1",
         "Label": "ww21p5_icxl_cc_rpd_tcons_abc_ftcon",
         "Step": "10_pre_cts",
@@ -3152,6 +3214,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smicxlpar1",
         "Label": "ww21p5_icxl_cc_rpd_tcons_abc_ftcon",
         "Step": "10_pre_cts",
@@ -3222,6 +3285,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smimfpar1",
         "Label": "final",
         "Step": "10_pre_cts",
@@ -3292,6 +3356,7 @@
         "Memory (MB)": "59829"
     },
     {
+        "Line Num":"5",
         "Partition": "smimfpar1",
         "Label": "final",
         "Step": "10_pre_cts",
@@ -3362,6 +3427,7 @@
         "Memory (MB)": "67594"
     },
     {
+        "Line Num":"5",
         "Partition": "smimfpar1",
         "Label": "final",
         "Step": "10_pre_cts",
@@ -3432,6 +3498,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smimfpar1",
         "Label": "final",
         "Step": "30_cts",
@@ -3502,6 +3569,7 @@
         "Memory (MB)": "50731"
     },
     {
+        "Line Num":"5",
         "Partition": "sminf",
         "Label": "fullfix",
         "Step": "10_pre_cts",
@@ -3572,6 +3640,7 @@
         "Memory (MB)": "59701"
     },
     {
+        "Line Num":"5",
         "Partition": "sminf",
         "Label": "fullfix",
         "Step": "10_pre_cts",
@@ -3642,6 +3711,7 @@
         "Memory (MB)": "61233"
     },
     {
+        "Line Num":"5",
         "Partition": "smmfx",
         "Label": "sd1p0_ww18p6_def_Golden_receipe_SNRLOOP_ww19p3",
         "Step": "10_pre_cts",
@@ -3712,6 +3782,7 @@
         "Memory (MB)": "60861"
     },
     {
+        "Line Num":"5",
         "Partition": "smmfx",
         "Label": "sd1p0_ww18p6_def_Golden_receipe_SNRLOOP_ww19p3",
         "Step": "10_pre_cts",
@@ -3782,6 +3853,7 @@
         "Memory (MB)": "66133"
     },
     {
+        "Line Num":"5",
         "Partition": "smsfc",
         "Label": "sd1p0_ww19p4def_ebbreg_grppath_rgm1m2_ww23p4",
         "Step": "10_pre_cts",
@@ -3852,6 +3924,7 @@
         "Memory (MB)": "58327"
     },
     {
+        "Line Num":"5",
         "Partition": "smsfc",
         "Label": "sd1p0_ww19p4def_ebbreg_script70_grppath_inter_ww23p1",
         "Step": "10_pre_cts",
@@ -3922,6 +3995,7 @@
         "Memory (MB)": "56542"
     },
     {
+        "Line Num":"5",
         "Partition": "smsystem",
         "Label": "1p0_golden_run_gp_new_hsd",
         "Step": "10_pre_cts",
@@ -3992,6 +4066,7 @@
         "Memory (MB)": "62241"
     },
     {
+        "Line Num":"5",
         "Partition": "smsystem",
         "Label": "1p0_golden_run_gp_new_hsd",
         "Step": "10_pre_cts",
@@ -4062,6 +4137,7 @@
         "Memory (MB)": "63026"
     },
     {
+        "Line Num":"5",
         "Partition": "smsystem",
         "Label": "1p0_golden_run_gp_new_hsd",
         "Step": "10_pre_cts",
@@ -4132,6 +4208,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smsystem",
         "Label": "1p0_golden_run_gp_new_hsd",
         "Step": "10_pre_cts",
@@ -4202,6 +4279,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdboxtop",
         "Label": "inter",
         "Step": "10_pre_cts",
@@ -4272,6 +4350,7 @@
         "Memory (MB)": "50921"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdboxtop",
         "Label": "inter",
         "Step": "10_pre_cts",
@@ -4342,6 +4421,7 @@
         "Memory (MB)": "50729"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdboxtop",
         "Label": "inter",
         "Step": "10_pre_cts",
@@ -4412,6 +4492,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdboxtop",
         "Label": "inter",
         "Step": "10_pre_cts",
@@ -4482,6 +4563,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar1",
         "Label": "branchsnr80",
         "Step": "10_pre_cts",
@@ -4552,6 +4634,7 @@
         "Memory (MB)": "72294"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar1",
         "Label": "branchsnr80",
         "Step": "10_pre_cts",
@@ -4622,6 +4705,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar1",
         "Label": "ww18p6_SD1p0_SD1p0ENV_golden",
         "Step": "10_pre_cts",
@@ -4692,6 +4776,7 @@
         "Memory (MB)": "68309"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar2",
         "Label": "isolationboundandchecker",
         "Step": "10_pre_cts",
@@ -4762,6 +4847,7 @@
         "Memory (MB)": "69920"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar2",
         "Label": "isolationboundandchecker",
         "Step": "10_pre_cts",
@@ -4832,6 +4918,7 @@
         "Memory (MB)": "74348"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar3",
         "Label": "WW19p5_run_27shorts",
         "Step": "10_pre_cts",
@@ -4902,6 +4989,7 @@
         "Memory (MB)": "56542"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar3",
         "Label": "WW19p5_run_exp2_short_app",
         "Step": "10_pre_cts",
@@ -4972,6 +5060,7 @@
         "Memory (MB)": "66626"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar3",
         "Label": "WW19p5_run_exp2_short_app",
         "Step": "10_pre_cts",
@@ -5042,6 +5131,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar3",
         "Label": "WW19p5_run_exp2_short_app",
         "Step": "10_pre_cts",
@@ -5112,6 +5202,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar4",
         "Label": "KO_ww19p1",
         "Step": "10_pre_cts",
@@ -5182,6 +5273,7 @@
         "Memory (MB)": "56009"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar4",
         "Label": "KO_ww19p1",
         "Step": "10_pre_cts",
@@ -5252,6 +5344,7 @@
         "Memory (MB)": "61758"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar4",
         "Label": "KO_ww19p1",
         "Step": "10_pre_cts",
@@ -5322,6 +5415,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar4",
         "Label": "KO_ww19p1",
         "Step": "10_pre_cts",
@@ -5392,6 +5486,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar5",
         "Label": "final_relay_fix",
         "Step": "10_pre_cts",
@@ -5462,6 +5557,7 @@
         "Memory (MB)": "65368"
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar5",
         "Label": "final_relay_fix",
         "Step": "10_pre_cts",
@@ -5532,6 +5628,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvdencpar5",
         "Label": "final_relay_fix",
         "Step": "10_pre_cts",
@@ -5602,6 +5699,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smveboxpar1",
         "Label": "ww23p5_runwithrpdmovementwithallfixes_halfcycledelay",
         "Step": "10_pre_cts",
@@ -5672,11 +5770,13 @@
         "Memory (MB)": "56300"
     },
     {
+        "Line Num":"5",
         "Partition": "smveboxpar1",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/timing.txt",
         "Label": "ww23p5_runwithrpdmovementwithallfixes_halfcycledelay",
         "Step": "10_pre_cts",
         "Dst": "510_trial_route_opt",
-        "WNS": "-0.0437",
+        "WNS": "-0.0649",
         "TNS": "-4.24",
         "Viols": "700",
         "MaxTrans Viols": "637",
@@ -5742,6 +5842,7 @@
         "Memory (MB)": "65165"
     },
     {
+        "Line Num":"5",
         "Partition": "smveboxpar2",
         "Label": "ww19def_exp4",
         "Step": "10_pre_cts",
@@ -5812,6 +5913,7 @@
         "Memory (MB)": "60469"
     },
     {
+        "Line Num":"5",
         "Partition": "smveboxpar2",
         "Label": "ww19def_exp12",
         "Step": "10_pre_cts",
@@ -5882,6 +5984,7 @@
         "Memory (MB)": "61768"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar1",
         "Label": "inter_345_tcon",
         "Step": "10_pre_cts",
@@ -5952,6 +6055,7 @@
         "Memory (MB)": "63332"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar1",
         "Label": "inter_345_tcon",
         "Step": "10_pre_cts",
@@ -6022,6 +6126,7 @@
         "Memory (MB)": "63242"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar1",
         "Label": "inter_345_tcon",
         "Step": "10_pre_cts",
@@ -6092,6 +6197,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar1",
         "Label": "inter_345_tcon",
         "Step": "10_pre_cts",
@@ -6162,6 +6268,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar2",
         "Label": "WW18p6_OFRTL_Recipes",
         "Step": "10_pre_cts",
@@ -6232,6 +6339,7 @@
         "Memory (MB)": "59384"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar2",
         "Label": "WW21p1_branch_shorts",
         "Step": "10_pre_cts",
@@ -6302,6 +6410,7 @@
         "Memory (MB)": "86286"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar3",
         "Label": "sd1p0_ww14p6_ortl_dupf_no_rp_blkgs_ovr_ebb_ww19p2_hier_km_ww19p5_inter_fix_ptgp",
         "Step": "10_pre_cts",
@@ -6372,6 +6481,7 @@
         "Memory (MB)": "58728"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar3",
         "Label": "sd1p0_ww14p6_ortl_dupf_no_rp_blkgs_ovr_ebb_ww19p2_hier_km_ww19p5_inter_fix_ptgp",
         "Step": "10_pre_cts",
@@ -6442,6 +6552,7 @@
         "Memory (MB)": "60120"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar3",
         "Label": "sd1p0_ww14p6_ortl_dupf_no_rp_blkgs_ovr_ebb_ww19p2_hier_km_ww19p5_inter_fix_ptgp",
         "Step": "10_pre_cts",
@@ -6512,6 +6623,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar3",
         "Label": "sd1p0_ww14p6_ortl_dupf_no_rp_blkgs_ovr_ebb_ww19p2_hier_km_ww19p5_inter_fix_ptgp",
         "Step": "10_pre_cts",
@@ -6582,11 +6694,13 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar4",
+        "path":"C:/Users/7394/Desktop/1209/DD_Dashboard/Frontend/src/Displayfiles/timing.txt",
         "Label": "run4",
         "Step": "10_pre_cts",
         "Dst": "020_prects_opt",
-        "WNS": "-0.0386",
+        "WNS": "-0.0053",
         "TNS": "-9.88",
         "Viols": "1480",
         "MaxTrans Viols": "24",
@@ -6652,6 +6766,7 @@
         "Memory (MB)": "52852"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar4",
         "Label": "run4_br",
         "Step": "10_pre_cts",
@@ -6722,6 +6837,7 @@
         "Memory (MB)": "104545"
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar4",
         "Label": "run4_br",
         "Step": "10_pre_cts",
@@ -6792,6 +6908,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar4",
         "Label": "run4_br",
         "Step": "10_pre_cts",
@@ -6862,6 +6979,7 @@
         "Memory (MB)": ""
     },
     {
+        "Line Num":"5",
         "Partition": "smvvcpar4",
         "Label": "run4_br",
         "Step": "30_cts",
@@ -6932,6 +7050,7 @@
         "Memory (MB)": "46675"
     },
     {
+        "Line Num":"5",
         "Partition": "sqbankgt",
         "Label": "congestionefforthigh",
         "Step": "10_pre_cts",
@@ -7002,6 +7121,7 @@
         "Memory (MB)": "59757"
     },
     {
+        "Line Num":"5",
         "Partition": "sqbankgt",
         "Label": "congestionefforthigh",
         "Step": "10_pre_cts",
