@@ -16,6 +16,7 @@ import GridExample from "../Displayfiles/GridExample";
 import NewTabContent from "../Displayfiles/NewTabContent";
 import DetailDashboard from "../Displayfiles/DetailDashboard";
 import FileViewerRenderer from "../Displayfiles/FileViewerRenderer";
+import DataGrid from "../Displayfiles/DataGrid"
 
 
 
@@ -85,6 +86,7 @@ const MainHome = () => {
           <Route path="/newtab" element={<NewTabContent />} />
           <Route path="/dd" element={<DetailDashboard />} />
           <Route path="/filerender" element={<FileViewerRenderer />} />
+          <Route path="/dg" element={<DataGrid />} />
 
 
 

@@ -1,0 +1,595 @@
+[   
+    
+    {   "Partition":"sag_xetlb",
+        "Timing": {
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:heartbt_clk(setup)": {
+                "wns": {
+                    "lineNumber": "2075",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "2.1465"
+                },
+                "tns": {
+                    "lineNumber": "2077",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0000"
+                },
+                "voils": {
+                    "lineNumber": "2078",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0"
+                }
+            },
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:rx_ref_div_clk(setup)": {
+                "wns": {
+                    "lineNumber": "2089",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0340"
+                },
+                "tns": {
+                    "lineNumber": "2091",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0000"
+                },
+                "voils": {
+                    "lineNumber": "2092",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0"
+                }
+            },
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:regin(setup)": {
+                "wns": {
+                    "lineNumber": "2773",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.1650"
+                },
+                "tns": {
+                    "lineNumber": "2775",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-52.5070"
+                },
+                "voils": {
+                    "lineNumber": "2776",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "1072"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:heartbt_clk(hold)": {
+                "wns": {
+                    "lineNumber": "13",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0153"
+                },
+                "tns": {
+                    "lineNumber": "14",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-1.1837"
+                },
+                "voils": {
+                    "lineNumber": "15",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "248"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:tx_synth_div_clk(hold)": {
+                "wns": {
+                    "lineNumber": "45",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0125"
+                },
+                "tns": {
+                    "lineNumber": "46",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0270"
+                },
+                "voils": {
+                    "lineNumber": "47",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "8"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:rx_llpd_clk(hold)": {
+                "wns": {
+                    "lineNumber": "53",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0162"
+                },
+                "tns": {
+                    "lineNumber": "54",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.2530"
+                },
+                "voils": {
+                    "lineNumber": "55",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "36"
+                }
+            }
+        },
+        "Route": {
+            "Routing": {
+                "net_length": {
+                    "lineNumber": 5745,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "13022102.7720"
+                },
+                "net_count": {
+                    "lineNumber": 5750,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "1209775"
+                }
+            },
+            "Congestion": {
+                "Both%": {
+                    "lineNumber": 918,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 0.5572"
+                },
+                "Horz%": {
+                    "lineNumber": 919,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 0.0954"
+                },
+                "Vert%": {
+                    "lineNumber": 920,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 1.0190"
+                }
+            }
+        },
+        "Design": {
+            "Area": {
+                "Cell_area": {
+                    "Value": 155546.8805,
+                    "Line_Number": 5792,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Die Area Utilization %": null,
+                "Design Utilization % -TBD": null,
+                "Gatecount": null
+            },
+            "cell:Count": {
+                "all": {
+                    "Value": 1098193.0,
+                    "Line_Number": 5705,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Comb": {
+                    "Value": 1040913.0,
+                    "Line_Number": 5710,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Seq": {
+                    "Value": 57280.0,
+                    "Line_Number": 5720,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Buf/Inv": {
+                    "Value": 196679.0,
+                    "Line_Number": 5706,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Hold Buf/Inv": null,
+                "Unclocked Seqs": null,
+                "Macro": {
+                    "Value": 0.0,
+                    "Line_Number": 5727,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Clk Buf/Inv": {
+                    "Value": 0.0,
+                    "Line_Number": 5709,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Clk Gates": {
+                    "Value": 2823.0,
+                    "Line_Number": 5721,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                }
+            },
+            "cell:Area": {
+                "all": {
+                    "Value": 155546.8805,
+                    "Line_Number": 5792,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Comb": {
+                    "Value": 105583.4986,
+                    "Line_Number": 5733,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Seq": {
+                    "Value": 49963.3819,
+                    "Line_Number": 5734,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Buf/Inv": {
+                    "Value": 17163.5573,
+                    "Line_Number": 5735,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Macro": {
+                    "Value": 0.0,
+                    "Line_Number": 5738,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Std cell Growth%": null,
+                "Hold Buf/Inv": null,
+                "Unclocked Seqs": null,
+                "Pfet": null
+            },
+            "cell:Flops": {
+                "Mbit flop%": {
+                    "Value": 11922.0,
+                    "Line_Number": 5724,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Ratio": {
+                    "Value": "64.70",
+                    "Line_Number": 5725,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                }
+            }
+        },
+        "Power": {
+            "Z": {
+                "Total Z": null,
+                "Norm Z": null,
+                "Avg Z": null,
+                "Avg Norm Z": null,
+                "Svt": {
+                    "Value": "86159.6770",
+                    "Line_Number": 28,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Lvtll": null,
+                "Lvt": {
+                    "Value": "31656.4639",
+                    "Line_Number": 27,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvtll": null,
+                "Ulvt": {
+                    "Value": "48861.7726",
+                    "Line_Number": 29,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvt %": {
+                    "Value": "29.32",
+                    "Line_Number": 29,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvtll %": null,
+                "Lvt %": {
+                    "Value": "18.99",
+                    "Line_Number": 27,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Svt %": {
+                    "Value": "51.69",
+                    "Line_Number": 28,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Lvtll %": null,
+                "Clk": null
+            },
+            "Constant_Switching_Activity": {
+                "Internal_power": {
+                    "Value": "N/A",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Switching_power": {
+                    "Value": "N/A",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Leakage_power": {
+                    "Value": "3.5321e+06 nW",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Total_count": {
+                    "Value": "3.5321e+06 nW",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                }
+            }
+        }
+    },
+    {   "Partition":"scmi_xetlb",
+        "Timing": {
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:heartbt_clk(setup)": {
+                "wns": {
+                    "lineNumber": "2075",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "2.1465"
+                },
+                "tns": {
+                    "lineNumber": "2077",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0000"
+                },
+                "voils": {
+                    "lineNumber": "2078",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0"
+                }
+            },
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:rx_ref_div_clk(setup)": {
+                "wns": {
+                    "lineNumber": "2089",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0340"
+                },
+                "tns": {
+                    "lineNumber": "2091",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0.0000"
+                },
+                "voils": {
+                    "lineNumber": "2092",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "0"
+                }
+            },
+            "func_ssgnp_0p675v_125c_cworst_CCworst_T:regin(setup)": {
+                "wns": {
+                    "lineNumber": "2773",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.1650"
+                },
+                "tns": {
+                    "lineNumber": "2775",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-52.5070"
+                },
+                "voils": {
+                    "lineNumber": "2776",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "1072"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:heartbt_clk(hold)": {
+                "wns": {
+                    "lineNumber": "13",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0153"
+                },
+                "tns": {
+                    "lineNumber": "14",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-1.1837"
+                },
+                "voils": {
+                    "lineNumber": "15",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "248"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:tx_synth_div_clk(hold)": {
+                "wns": {
+                    "lineNumber": "45",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0125"
+                },
+                "tns": {
+                    "lineNumber": "46",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0270"
+                },
+                "voils": {
+                    "lineNumber": "47",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "8"
+                }
+            },
+            "func_ffgnp_0p935v_0c_cbest_CCbest:rx_llpd_clk(hold)": {
+                "wns": {
+                    "lineNumber": "53",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.0162"
+                },
+                "tns": {
+                    "lineNumber": "54",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "-0.2530"
+                },
+                "voils": {
+                    "lineNumber": "55",
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "36"
+                }
+            }
+        },
+        "Route": {
+            "Routing": {
+                "net_length": {
+                    "lineNumber": 5745,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "13022102.7720"
+                },
+                "net_count": {
+                    "lineNumber": 5750,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt",
+                    "value": "1209775"
+                }
+            },
+            "Congestion": {
+                "Both%": {
+                    "lineNumber": 918,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 0.5572"
+                },
+                "Horz%": {
+                    "lineNumber": 919,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 0.0954"
+                },
+                "Vert%": {
+                    "lineNumber": 920,
+                    "path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_repor_congestion.rpt",
+                    "value": " 1.0190"
+                }
+            }
+        },
+        "Design": {
+            "Area": {
+                "Cell_area": {
+                    "Value": 155546.8805,
+                    "Line_Number": 5792,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Die Area Utilization %": null,
+                "Design Utilization % -TBD": null,
+                "Gatecount": null
+            },
+            "cell:Count": {
+                "all": {
+                    "Value": 1098193.0,
+                    "Line_Number": 5705,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Comb": {
+                    "Value": 1040913.0,
+                    "Line_Number": 5710,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Seq": {
+                    "Value": 57280.0,
+                    "Line_Number": 5720,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Buf/Inv": {
+                    "Value": 196679.0,
+                    "Line_Number": 5706,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Hold Buf/Inv": null,
+                "Unclocked Seqs": null,
+                "Macro": {
+                    "Value": 0.0,
+                    "Line_Number": 5727,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Clk Buf/Inv": {
+                    "Value": 0.0,
+                    "Line_Number": 5709,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Clk Gates": {
+                    "Value": 2823.0,
+                    "Line_Number": 5721,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                }
+            },
+            "cell:Area": {
+                "all": {
+                    "Value": 155546.8805,
+                    "Line_Number": 5792,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Comb": {
+                    "Value": 105583.4986,
+                    "Line_Number": 5733,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Seq": {
+                    "Value": 49963.3819,
+                    "Line_Number": 5734,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Buf/Inv": {
+                    "Value": 17163.5573,
+                    "Line_Number": 5735,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Macro": {
+                    "Value": 0.0,
+                    "Line_Number": 5738,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Std cell Growth%": null,
+                "Hold Buf/Inv": null,
+                "Unclocked Seqs": null,
+                "Pfet": null
+            },
+            "cell:Flops": {
+                "Mbit flop%": {
+                    "Value": 11922.0,
+                    "Line_Number": 5724,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                },
+                "Ratio": {
+                    "Value": "64.70",
+                    "Line_Number": 5725,
+                    "File_path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_qor.rpt"
+                }
+            }
+        },
+        "Power": {
+            "Z": {
+                "Total Z": null,
+                "Norm Z": null,
+                "Avg Z": null,
+                "Avg Norm Z": null,
+                "Svt": {
+                    "Value": "86159.6770",
+                    "Line_Number": 28,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Lvtll": null,
+                "Lvt": {
+                    "Value": "31656.4639",
+                    "Line_Number": 27,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvtll": null,
+                "Ulvt": {
+                    "Value": "48861.7726",
+                    "Line_Number": 29,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvt %": {
+                    "Value": "29.32",
+                    "Line_Number": 29,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Ulvtll %": null,
+                "Lvt %": {
+                    "Value": "18.99",
+                    "Line_Number": 27,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Svt %": {
+                    "Value": "51.69",
+                    "Line_Number": 28,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_thresold_voltage.rpt"
+                },
+                "Lvtll %": null,
+                "Clk": null
+            },
+            "Constant_Switching_Activity": {
+                "Internal_power": {
+                    "Value": "N/A",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Switching_power": {
+                    "Value": "N/A",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Leakage_power": {
+                    "Value": "3.5321e+06 nW",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                },
+                "Total_count": {
+                    "Value": "3.5321e+06 nW",
+                    "Line_Number": 51,
+                    "File_Path": "D:\\DD\\server\\BackendServer\\ServerApp\\maindashboardV_one\\smavpar1\\route\\zcms_4dbe_lane_report_power.rpt"
+                }
+            }
+        }
+    }
+]

@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const cors = require('cors');``
+const cors = require('cors');
 
 const app = express();
 const port = 4001;
@@ -9,6 +9,22 @@ const port = 4001;
 // Enable CORS for all routes
 app.use(cors());
 app.use(express.json());
+
+
+const _dirname = path.dirname("")
+const builPath = path.join(_dirname, "../frontend/build");
+// app.use(express.static(builPath))
+app.use(express.static(path.join(builPath)));
+app.get("/*", function (req, res) {
+  res.sendFile('index.html',
+    { root: path.join(_dirname, "../frontend/build") },
+    function (err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    }
+  );
+})
 
 
 app.post('/api/openFile', (req, res) => {
